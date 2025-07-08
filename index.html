@@ -23,6 +23,15 @@ body { font-family: 'Montserrat', sans-serif; }
 .gallery-swiper .swiper-slide { width: 250px; height: 250px; }
 /* Estilos para la imagen ampliada del carrusel */
 .gslide-image { border-radius: 0.75rem; box-shadow: 0 10px 25px rgba(0,0,0,0.6); }
+/* Contenedor con efecto de cristal */
+.glass {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 1rem;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.5);
+}
 </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
@@ -32,10 +41,11 @@ body { font-family: 'Montserrat', sans-serif; }
 <section class="relative min-h-screen">
   <img src="FondoPortada.jpg" class="absolute inset-0 w-full h-full object-cover" alt="Villa">
   <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
-    <div class="text-center text-white px-4">
-      <h1 class="text-3xl sm:text-5xl font-bold logo-font">Bienvenidos a Villa La Perla</h1>
+    <div class="glass text-center text-white px-8 py-6">
+      <p class="text-2xl sm:text-3xl font-semibold">Bienvenidos a</p>
+      <h1 class="text-4xl sm:text-6xl font-bold logo-font mt-2">Villa La Perla</h1>
       <p class="mt-4 text-lg">Tu escape natural en La Calixtina</p>
-      <a href="#contacto" class="mt-6 inline-block bg-amber-500 hover:bg-amber-600 text-white px-6 py-3 rounded-full">Reserva ahora</a>
+      <a href="#contacto" class="mt-6 inline-block bg-amber-500 hover:bg-amber-600 text-white px-6 py-3 rounded-full">Consulta disponibilidad</a>
     </div>
   </div>
 </section>
@@ -170,8 +180,8 @@ body { font-family: 'Montserrat', sans-serif; }
     </div>
   </div>
 </section>
-<a href="https://wa.me/5214491108028" class="fixed bottom-4 right-4 bg-green-500 text-white p-4 rounded-full shadow-lg" target="_blank" aria-label="WhatsApp">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-8 h-auto"><path fill="currentColor" d="M380.9 97.1C339-12.5 216.9-33 127 6.2 70.3 32.1 26 77.8 9.2 137.3c-19 69.5 3.9 142.9 59.5 189.7l-9.4 69.5 70.4-18.4c42.9 23.6 92.1 29.3 138.4 16.3 70.5-19 124.9-72.2 141.4-142.2 13.2-54.8 4-112-28.6-159.6zM232 367.9c-38.6 0-76.9-10.4-110-30l-7.9-4.7-41.8 11 11.1-40.8-5.2-8.1c-21-32.7-32.7-71.8-32.7-111.8 0-114.5 93-207.5 207.5-207.5 55.5 0 107.5 21.7 146.7 61 39.2 39.2 60.9 91.2 60.9 146.7 0 114.5-93 207.5-207.5 207.5z"/></svg>
+<a href="https://wa.me/5214491108028" class="fixed bottom-4 right-4 bg-green-500 text-white p-4 rounded-full shadow-lg flex items-center justify-center" target="_blank" aria-label="WhatsApp">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-8 h-8"><path fill="currentColor" d="M380.9 97.1C339-12.5 216.9-33 127 6.2 70.3 32.1 26 77.8 9.2 137.3c-19 69.5 3.9 142.9 59.5 189.7l-9.4 69.5 70.4-18.4c42.9 23.6 92.1 29.3 138.4 16.3 70.5-19 124.9-72.2 141.4-142.2 13.2-54.8 4-112-28.6-159.6zM232 367.9c-38.6 0-76.9-10.4-110-30l-7.9-4.7-41.8 11 11.1-40.8-5.2-8.1c-21-32.7-32.7-71.8-32.7-111.8 0-114.5 93-207.5 207.5-207.5 55.5 0 107.5 21.7 146.7 61 39.2 39.2 60.9 91.2 60.9 146.7 0 114.5-93 207.5-207.5 207.5z"/></svg>
 </a>
 <footer class="bg-gray-800 text-white text-center p-4 mt-12">
   <p>Síguenos en <a href="https://www.facebook.com/VillaLaPerlaAgs" class="underline">Facebook</a></p>
