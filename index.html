@@ -43,7 +43,27 @@ body { font-family: 'Montserrat', sans-serif; }
 }
 </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-gray-50 text-gray-800" x-data="{menuOpen:false}">
+<div id="top"></div>
+<button @click="menuOpen=true" class="fixed top-4 left-4 z-50 bg-amber-500 text-white p-2 rounded md:hidden">
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+  </svg>
+</button>
+<nav :class="{'-translate-x-full':!menuOpen}" class="fixed top-0 left-0 w-56 h-full bg-white shadow transform transition-transform -translate-x-full md:translate-x-0 md:block z-40">
+  <button @click="menuOpen=false" class="absolute top-4 right-4 md:hidden text-xl">&times;</button>
+  <ul class="mt-16 space-y-4 p-4">
+    <li><a href="#sobre" @click="menuOpen=false" class="block hover:underline">Sobre la Villa</a></li>
+    <li><a href="#instalaciones" @click="menuOpen=false" class="block hover:underline">Instalaciones</a></li>
+    <li><a href="#galeria" @click="menuOpen=false" class="block hover:underline">Galería</a></li>
+    <li><a href="#caracteristicas" @click="menuOpen=false" class="block hover:underline">Amenidades</a></li>
+    <li><a href="#calendario" @click="menuOpen=false" class="block hover:underline">Disponibilidad</a></li>
+    <li><a href="#testimonios" @click="menuOpen=false" class="block hover:underline">Comentarios</a></li>
+    <li><a href="#reserva" @click="menuOpen=false" class="block hover:underline">Reserva</a></li>
+    <li><a href="#contacto" @click="menuOpen=false" class="block hover:underline">Contacto</a></li>
+    <li><a href="#como-llegar" @click="menuOpen=false" class="block hover:underline">¿Cómo llegar?</a></li>
+  </ul>
+</nav>
 <section class="relative min-h-screen">
   <img src="FondoPortada.jpg" class="absolute inset-0 w-full h-full object-cover" alt="Villa">
   <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
@@ -306,8 +326,13 @@ body { font-family: 'Montserrat', sans-serif; }
     </div>
   </div>
 </section>
+<a href="#top" class="fixed bottom-20 right-4 bg-amber-500 text-white p-4 rounded-full shadow-lg flex items-center justify-center" aria-label="Regresar arriba">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+    <path fill-rule="evenodd" d="M12 5.828l4.95 4.95a.75.75 0 101.06-1.06L12 3.707 6.99 9.718a.75.75 0 101.06 1.06L12 5.828zM4.5 18a.75.75 0 00.75.75h13.5a.75.75 0 000-1.5H5.25A.75.75 0 004.5 18z" clip-rule="evenodd" />
+  </svg>
+</a>
 <a href="https://wa.me/5214491108028" class="fixed bottom-4 right-4 bg-green-500 text-white p-6 rounded-full shadow-lg flex items-center justify-center" target="_blank" aria-label="WhatsApp">
-  <svg xmlns="WhatsApp.png" viewBox="0 0 448 512" class="w-8 h-8"><path fill="currentColor" d="M380.9 97.1C339-12.5 216.9-33 127 6.2 70.3 32.1 26 77.8 9.2 137.3c-19 69.5 3.9 142.9 59.5 189.7l-9.4 69.5 70.4-18.4c42.9 23.6 92.1 29.3 138.4 16.3 70.5-19 124.9-72.2 141.4-142.2 13.2-54.8 4-112-28.6-159.6zM232 367.9c-38.6 0-76.9-10.4-110-30l-7.9-4.7-41.8 11 11.1-40.8-5.2-8.1c-21-32.7-32.7-71.8-32.7-111.8 0-114.5 93-207.5 207.5-207.5 55.5 0 107.5 21.7 146.7 61 39.2 39.2 60.9 91.2 60.9 146.7 0 114.5-93 207.5-207.5 207.5z"/></svg>
+  <img src="WhatsApp.png" alt="WhatsApp" class="w-8 h-8">
 </a>
 <footer class="bg-gray-800 text-white text-center p-4 mt-12">
   <p>Síguenos en <a href="https://www.facebook.com/VillaLaPerlaAgs" class="underline">Facebook</a></p>
