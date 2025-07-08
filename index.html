@@ -43,25 +43,25 @@ body { font-family: 'Montserrat', sans-serif; }
 }
 </style>
 </head>
-<body class="bg-gray-50 text-gray-800" x-data="{menuOpen:false}">
+<body class="bg-gray-50 text-gray-800">
 <div id="top"></div>
-<button @click="menuOpen=true" class="fixed top-4 left-4 z-50 bg-amber-500 text-white p-2 rounded md:hidden">
+<button id="open-menu" class="fixed top-4 left-4 z-50 bg-amber-500 text-white p-2 rounded md:hidden">
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
   </svg>
 </button>
-<nav @click.outside="menuOpen=false" :class="{'-translate-x-full':!menuOpen}" class="fixed top-0 left-0 w-56 h-full bg-[#f5f5dc] shadow transform transition-transform md:translate-x-0 md:block z-40">
-  <button @click="menuOpen=false" class="absolute top-4 right-4 md:hidden text-xl">&times;</button>
+<nav id="main-nav" class="fixed top-0 left-0 w-56 h-full bg-[#f5f5dc] shadow transform transition-transform -translate-x-full md:translate-x-0 md:block z-40">
+  <button id="close-menu" class="absolute top-4 right-4 md:hidden text-xl">&times;</button>
   <ul class="mt-16 space-y-4 p-4">
-    <li><a href="#sobre" @click="menuOpen=false" class="block px-2 py-1 rounded hover:bg-amber-200 hover:underline">Sobre la Villa</a></li>
-    <li><a href="#instalaciones" @click="menuOpen=false" class="block px-2 py-1 rounded hover:bg-amber-200 hover:underline">Instalaciones</a></li>
-    <li><a href="#galeria" @click="menuOpen=false" class="block px-2 py-1 rounded hover:bg-amber-200 hover:underline">Galería</a></li>
-    <li><a href="#caracteristicas" @click="menuOpen=false" class="block px-2 py-1 rounded hover:bg-amber-200 hover:underline">Amenidades</a></li>
-    <li><a href="#calendario" @click="menuOpen=false" class="block px-2 py-1 rounded hover:bg-amber-200 hover:underline">Disponibilidad</a></li>
-    <li><a href="#testimonios" @click="menuOpen=false" class="block px-2 py-1 rounded hover:bg-amber-200 hover:underline">Comentarios</a></li>
-    <li><a href="#reserva" @click="menuOpen=false" class="block px-2 py-1 rounded hover:bg-amber-200 hover:underline">Reserva</a></li>
-    <li><a href="#contacto" @click="menuOpen=false" class="block px-2 py-1 rounded hover:bg-amber-200 hover:underline">Contacto</a></li>
-    <li><a href="#como-llegar" @click="menuOpen=false" class="block px-2 py-1 rounded hover:bg-amber-200 hover:underline">¿Cómo llegar?</a></li>
+    <li><a href="#sobre" class="flex items-center px-2 py-1 rounded hover:bg-amber-200"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mr-2"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L15.586 11H3a1 1 0 110-2h12.586l-5.293-5.293a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>Sobre la Villa</a></li>
+    <li><a href="#instalaciones" class="flex items-center px-2 py-1 rounded hover:bg-amber-200"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mr-2"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L15.586 11H3a1 1 0 110-2h12.586l-5.293-5.293a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>Instalaciones</a></li>
+    <li><a href="#galeria" class="flex items-center px-2 py-1 rounded hover:bg-amber-200"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mr-2"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L15.586 11H3a1 1 0 110-2h12.586l-5.293-5.293a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>Galería</a></li>
+    <li><a href="#caracteristicas" class="flex items-center px-2 py-1 rounded hover:bg-amber-200"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mr-2"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L15.586 11H3a1 1 0 110-2h12.586l-5.293-5.293a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>Amenidades</a></li>
+    <li><a href="#calendario" class="flex items-center px-2 py-1 rounded hover:bg-amber-200"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mr-2"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L15.586 11H3a1 1 0 110-2h12.586l-5.293-5.293a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>Disponibilidad</a></li>
+    <li><a href="#testimonios" class="flex items-center px-2 py-1 rounded hover:bg-amber-200"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mr-2"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L15.586 11H3a1 1 0 110-2h12.586l-5.293-5.293a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>Comentarios</a></li>
+    <li><a href="#reserva" class="flex items-center px-2 py-1 rounded hover:bg-amber-200"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mr-2"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L15.586 11H3a1 1 0 110-2h12.586l-5.293-5.293a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>Reserva</a></li>
+    <li><a href="#contacto" class="flex items-center px-2 py-1 rounded hover:bg-amber-200"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mr-2"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L15.586 11H3a1 1 0 110-2h12.586l-5.293-5.293a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>Contacto</a></li>
+    <li><a href="#como-llegar" class="flex items-center px-2 py-1 rounded hover:bg-amber-200"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mr-2"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L15.586 11H3a1 1 0 110-2h12.586l-5.293-5.293a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>¿Cómo llegar?</a></li>
   </ul>
 </nav>
 <section class="relative min-h-screen">
@@ -365,6 +365,20 @@ body { font-family: 'Montserrat', sans-serif; }
       ]
     });
     calendar.render();
+    const nav = document.getElementById('main-nav');
+    const openBtn = document.getElementById('open-menu');
+    const closeBtn = document.getElementById('close-menu');
+    const links = nav.querySelectorAll('a');
+    const hide = () => nav.classList.add('-translate-x-full');
+    openBtn.addEventListener('click', e => {
+      e.stopPropagation();
+      nav.classList.remove('-translate-x-full');
+    });
+    closeBtn.addEventListener('click', hide);
+    links.forEach(l => l.addEventListener('click', hide));
+    document.addEventListener('click', e => {
+      if(!nav.contains(e.target) && !openBtn.contains(e.target)) hide();
+    });
   });
   function testimonialApp(){
     return {
