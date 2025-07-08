@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Villa La Perla</title>
+<meta name="description" content="Renta de villa campestre en la reserva ecológica La Calixtina, Calvillo, Aguascalientes.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.5/index.global.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.5/index.global.min.js"></script>
+<style>
+body { font-family: 'Montserrat', sans-serif; }
+.logo-font { font-family: 'Dancing Script', cursive; }
+</style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+<header class="bg-white shadow p-4 flex justify-center">
+  <img src="logo.png" alt="Villa La Perla" class="h-16" />
+</header>
+<section class="relative">
+  <img src="https://source.unsplash.com/random/1200x800?nature,resort" class="w-full h-64 sm:h-96 object-cover" alt="Villa">
+  <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+    <div class="text-center text-white px-4">
+      <h1 class="text-3xl sm:text-5xl font-bold logo-font">Bienvenidos a Villa La Perla</h1>
+      <p class="mt-4 text-lg">Tu escape natural en La Calixtina</p>
+      <a href="#contacto" class="mt-6 inline-block bg-amber-500 hover:bg-amber-600 text-white px-6 py-3 rounded-full">Reserva ahora</a>
+    </div>
+  </div>
+</section>
+<section id="sobre" class="py-12 px-4 text-center">
+  <h2 class="text-2xl logo-font mb-4">Sobre la Villa</h2>
+  <p class="max-w-2xl mx-auto">Villa La Perla es una acogedora casa de campo ubicada en la reserva ecológica "La Calixtina" en Calvillo, Aguascalientes. Disfruta de un ambiente natural, cómodo y relajante.</p>
+</section>
+<section id="galeria" class="bg-white py-12">
+  <h2 class="text-center text-2xl logo-font mb-8">Galería</h2>
+  <div class="swiper gallery-swiper px-4">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="https://source.unsplash.com/random/600x400?villa1" class="w-full object-cover rounded-lg" alt=""></div>
+      <div class="swiper-slide"><img src="https://source.unsplash.com/random/600x400?villa2" class="w-full object-cover rounded-lg" alt=""></div>
+      <div class="swiper-slide"><img src="https://source.unsplash.com/random/600x400?villa3" class="w-full object-cover rounded-lg" alt=""></div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+  <div class="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-4 px-4">
+    <a href="https://source.unsplash.com/random/800x600?villa4" class="glightbox"><img src="https://source.unsplash.com/random/400x300?villa4" class="w-full object-cover rounded-lg" alt=""></a>
+    <a href="https://source.unsplash.com/random/800x600?villa5" class="glightbox"><img src="https://source.unsplash.com/random/400x300?villa5" class="w-full object-cover rounded-lg" alt=""></a>
+    <a href="https://source.unsplash.com/random/800x600?villa6" class="glightbox"><img src="https://source.unsplash.com/random/400x300?villa6" class="w-full object-cover rounded-lg" alt=""></a>
+    <a href="https://source.unsplash.com/random/800x600?villa7" class="glightbox"><img src="https://source.unsplash.com/random/400x300?villa7" class="w-full object-cover rounded-lg" alt=""></a>
+  </div>
+</section>
+<section id="calendario" class="py-12 bg-gray-100">
+  <h2 class="text-center text-2xl logo-font mb-4">Disponibilidad</h2>
+  <div id="calendar" class="max-w-4xl mx-auto"></div>
+</section>
+<section id="faq" class="py-12 px-4">
+  <h2 class="text-center text-2xl logo-font mb-4">Preguntas frecuentes</h2>
+  <div class="max-w-xl mx-auto" x-data="{open:null}">
+    <div class="border-b py-2">
+      <h3><button class="w-full text-left font-semibold" @click="open===1?open=null:open=1">¿Cuántas personas pueden hospedarse?</button></h3>
+      <p x-show="open===1" class="mt-2">La villa tiene capacidad para 8 huéspedes.</p>
+    </div>
+    <div class="border-b py-2">
+      <h3><button class="w-full text-left font-semibold" @click="open===2?open=null:open=2">¿Se permiten mascotas?</button></h3>
+      <p x-show="open===2" class="mt-2">Sí, con previa autorización.</p>
+    </div>
+    <div class="border-b py-2">
+      <h3><button class="w-full text-left font-semibold" @click="open===3?open=null:open=3">¿Cuál es el horario de entrada y salida?</button></h3>
+      <p x-show="open===3" class="mt-2">Entrada a partir de las 3 pm y salida antes de las 12 pm.</p>
+    </div>
+  </div>
+</section>
+<section id="testimonios" class="bg-white py-12 px-4" x-data="testimonialApp()" x-init="init()">
+  <h2 class="text-center text-2xl logo-font mb-4">Comentarios</h2>
+  <div class="space-y-4 max-w-xl mx-auto">
+    <template x-for="(t, index) in testimonials" :key="index">
+      <div class="p-4 bg-gray-100 rounded">
+        <p class="italic" x-text="t.mensaje"></p>
+        <p class="text-right mt-2 font-semibold" x-text="t.nombre"></p>
+      </div>
+    </template>
+  </div>
+  <form class="mt-8 space-y-4 max-w-xl mx-auto" @submit.prevent="addTestimonial">
+    <input type="text" placeholder="Nombre" x-model="nuevo.nombre" required class="w-full border rounded p-2" />
+    <textarea placeholder="Mensaje" x-model="nuevo.mensaje" required class="w-full border rounded p-2"></textarea>
+    <button type="submit" class="bg-amber-500 text-white px-4 py-2 rounded">Enviar</button>
+  </form>
+</section>
+<section id="contacto" class="py-12 px-4 bg-gray-100">
+  <h2 class="text-center text-2xl logo-font mb-4">Contáctanos</h2>
+  <form class="max-w-xl mx-auto space-y-4" action="mailto:villalaperla1@gmail.com" method="post" enctype="text/plain">
+    <input type="text" name="nombre" placeholder="Nombre" required class="w-full border rounded p-2" />
+    <input type="email" name="correo" placeholder="Correo" required class="w-full border rounded p-2" />
+    <textarea name="mensaje" placeholder="Mensaje" required class="w-full border rounded p-2"></textarea>
+    <button type="submit" class="bg-amber-500 hover:bg-amber-600 text-white px-4 py-2 rounded w-full">Enviar</button>
+  </form>
+  <div class="mt-8">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3733.123040114204!2d-102.73369528589677!3d21.84211206506995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8429bdf5360fc077%3A0xce42a5b3e80967fd!2sCalvillo%2C%20Ags.!5e0!3m2!1ses-419!2smx!4v1627046452260!5m2!1ses-419!2smx" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</section>
+<a href="https://wa.me/5214491108028" class="fixed bottom-4 right-4 bg-green-500 text-white p-4 rounded-full shadow-lg" target="_blank" aria-label="WhatsApp">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-6 h-6"><path fill="currentColor" d="M380.9 97.1C339-12.5 216.9-33 127 6.2 70.3 32.1 26 77.8 9.2 137.3c-19 69.5 3.9 142.9 59.5 189.7l-9.4 69.5 70.4-18.4c42.9 23.6 92.1 29.3 138.4 16.3 70.5-19 124.9-72.2 141.4-142.2 13.2-54.8 4-112-28.6-159.6zM232 367.9c-38.6 0-76.9-10.4-110-30l-7.9-4.7-41.8 11 11.1-40.8-5.2-8.1c-21-32.7-32.7-71.8-32.7-111.8 0-114.5 93-207.5 207.5-207.5 55.5 0 107.5 21.7 146.7 61 39.2 39.2 60.9 91.2 60.9 146.7 0 114.5-93 207.5-207.5 207.5z"/></svg>
+</a>
+<footer class="bg-gray-800 text-white text-center p-4 mt-12">
+  <p>Síguenos en <a href="https://www.facebook.com/VillaLaPerlaAgs" class="underline">Facebook</a></p>
+  <p class="mt-2">© 2025 Villa La Perla - Calvillo, Aguascalientes</p>
+</footer>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    new Swiper('.gallery-swiper', {
+      loop: true,
+      pagination: { el: '.swiper-pagination', clickable: true }
+    });
+    GLightbox({ selector: '.glightbox' });
+    const calendarEl = document.getElementById('calendar');
+    const calendar = new FullCalendar.Calendar(calendarEl, {
+      initialView: 'dayGridMonth',
+      locale: 'es',
+      events: [
+        { title: 'Ocupado', start: '2025-07-10', end: '2025-07-15' }
+      ]
+    });
+    calendar.render();
+  });
+  function testimonialApp(){
+    return {
+      testimonials: [],
+      nuevo: {nombre: '', mensaje: ''},
+      async init(){
+        const res = await fetch('testimonials.json');
+        this.testimonials = await res.json();
+      },
+      addTestimonial(){
+        if(this.nuevo.nombre && this.nuevo.mensaje){
+          this.testimonials.push({...this.nuevo});
+          this.nuevo = {nombre:'',mensaje:''};
+        }
+      }
+    }
+  }
+</script>
+</body>
+</html>
