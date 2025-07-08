@@ -21,6 +21,8 @@
 body { font-family: 'Montserrat', sans-serif; }
 .logo-font { font-family: 'Dancing Script', cursive; }
 .gallery-swiper .swiper-slide { width: 250px; height: 250px; }
+/* Estilos para la imagen ampliada del carrusel */
+.gslide-image { border-radius: 0.75rem; box-shadow: 0 10px 25px rgba(0,0,0,0.6); }
 </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
@@ -40,7 +42,13 @@ body { font-family: 'Montserrat', sans-serif; }
 <section id="sobre" class="py-12">
   <div class="max-w-5xl mx-auto px-4 text-center">
     <h2 class="text-3xl logo-font mb-4">Sobre la Villa</h2>
-    <p>Villa La Perla es una acogedora casa de campo ubicada en la reserva ecológica "La Calixtina" en Calvillo, Aguascalientes. Disfruta de un ambiente natural, cómodo y relajante.</p>
+    <div class="space-y-2" style="text-align: justify;">
+      <p>Nuestra villa se encuentra en un entorno privilegiado dentro de la reserva ecológica "La Calixtina".</p>
+      <p>Su ubicación te permite disfrutar de la naturaleza y la tranquilidad sin renunciar a las comodidades modernas.</p>
+      <p>Cada espacio ha sido diseñado para la convivencia familiar o entre amigos.</p>
+      <p>Las habitaciones están equipadas para que tu descanso sea pleno durante toda la estancia.</p>
+      <p>Ven a descubrir por qué Villa La Perla es la mejor opción para desconectarte.</p>
+    </div>
   </div>
 </section>
 <section id="caracteristicas" class="py-12 bg-gray-100">
@@ -65,22 +73,22 @@ body { font-family: 'Montserrat', sans-serif; }
     <h2 class="text-center text-3xl logo-font mb-8">Galería</h2>
     <div class="swiper gallery-swiper">
     <div class="swiper-wrapper">
-    <div class="swiper-slide"><img src="Galeria/1.-Comedor.jpg" class="w-full h-full object-cover rounded-lg" alt=""></div>
-    <div class="swiper-slide"><img src="Galeria/2.-Recamara1.jpg" class="w-full h-full object-cover rounded-lg" alt=""></div>
-    <div class="swiper-slide"><img src="Galeria/3.-Recamara2.jpg" class="w-full h-full object-cover rounded-lg" alt=""></div>
-    <div class="swiper-slide"><img src="Galeria/4.-Recamara3.jpg" class="w-full h-full object-cover rounded-lg" alt=""></div>
-    <div class="swiper-slide"><img src="Galeria/5.-Jacuzzi.jpg" class="w-full h-full object-cover rounded-lg" alt=""></div>
-    <div class="swiper-slide"><img src="Galeria/6.-Ba\303\261o.jpg" class="w-full h-full object-cover rounded-lg" alt=""></div>
-    <div class="swiper-slide"><img src="Galeria/7.-Ba\303\261o.jpg" class="w-full h-full object-cover rounded-lg" alt=""></div>
-    <div class="swiper-slide"><img src="Galeria/8.-Terraza1.jpg" class="w-full h-full object-cover rounded-lg" alt=""></div>
-    <div class="swiper-slide"><img src="Galeria/9.-Terraza2.jpg" class="w-full h-full object-cover rounded-lg" alt=""></div>
-    <div class="swiper-slide"><img src="Galeria/10.-Exterior.jpg" class="w-full h-full object-cover rounded-lg" alt=""></div>
-    <div class="swiper-slide"><img src="Galeria/11.-Exterior.jpg" class="w-full h-full object-cover rounded-lg" alt=""></div>
-    <div class="swiper-slide"><img src="Galeria/12.-Exterior.jpg" class="w-full h-full object-cover rounded-lg" alt=""></div>
-    <div class="swiper-slide"><img src="Galeria/13.-Alberca.jpg" class="w-full h-full object-cover rounded-lg" alt=""></div>
-    <div class="swiper-slide"><img src="Galeria/14.-Alberca.jpg" class="w-full h-full object-cover rounded-lg" alt=""></div>
-    <div class="swiper-slide"><img src="Galeria/15.-AlbercaNoche.jpg" class="w-full h-full object-cover rounded-lg" alt=""></div>
-    <div class="swiper-slide"><img src="Galeria/16.-AlbercaNoche.jpg" class="w-full h-full object-cover rounded-lg" alt=""></div>
+    <div class="swiper-slide"><a href="Galeria/1.-Comedor.jpg" class="glightbox"><img src="Galeria/1.-Comedor.jpg" class="w-full h-full object-cover rounded-lg" alt=""></a></div>
+    <div class="swiper-slide"><a href="Galeria/2.-Recamara1.jpg" class="glightbox"><img src="Galeria/2.-Recamara1.jpg" class="w-full h-full object-cover rounded-lg" alt=""></a></div>
+    <div class="swiper-slide"><a href="Galeria/3.-Recamara2.jpg" class="glightbox"><img src="Galeria/3.-Recamara2.jpg" class="w-full h-full object-cover rounded-lg" alt=""></a></div>
+    <div class="swiper-slide"><a href="Galeria/4.-Recamara3.jpg" class="glightbox"><img src="Galeria/4.-Recamara3.jpg" class="w-full h-full object-cover rounded-lg" alt=""></a></div>
+    <div class="swiper-slide"><a href="Galeria/5.-Jacuzzi.jpg" class="glightbox"><img src="Galeria/5.-Jacuzzi.jpg" class="w-full h-full object-cover rounded-lg" alt=""></a></div>
+    <div class="swiper-slide"><a href="Galeria/6.-Ba\303\261o.jpg" class="glightbox"><img src="Galeria/6.-Ba\303\261o.jpg" class="w-full h-full object-cover rounded-lg" alt=""></a></div>
+    <div class="swiper-slide"><a href="Galeria/7.-Ba\303\261o.jpg" class="glightbox"><img src="Galeria/7.-Ba\303\261o.jpg" class="w-full h-full object-cover rounded-lg" alt=""></a></div>
+    <div class="swiper-slide"><a href="Galeria/8.-Terraza1.jpg" class="glightbox"><img src="Galeria/8.-Terraza1.jpg" class="w-full h-full object-cover rounded-lg" alt=""></a></div>
+    <div class="swiper-slide"><a href="Galeria/9.-Terraza2.jpg" class="glightbox"><img src="Galeria/9.-Terraza2.jpg" class="w-full h-full object-cover rounded-lg" alt=""></a></div>
+    <div class="swiper-slide"><a href="Galeria/10.-Exterior.jpg" class="glightbox"><img src="Galeria/10.-Exterior.jpg" class="w-full h-full object-cover rounded-lg" alt=""></a></div>
+    <div class="swiper-slide"><a href="Galeria/11.-Exterior.jpg" class="glightbox"><img src="Galeria/11.-Exterior.jpg" class="w-full h-full object-cover rounded-lg" alt=""></a></div>
+    <div class="swiper-slide"><a href="Galeria/12.-Exterior.jpg" class="glightbox"><img src="Galeria/12.-Exterior.jpg" class="w-full h-full object-cover rounded-lg" alt=""></a></div>
+    <div class="swiper-slide"><a href="Galeria/13.-Alberca.jpg" class="glightbox"><img src="Galeria/13.-Alberca.jpg" class="w-full h-full object-cover rounded-lg" alt=""></a></div>
+    <div class="swiper-slide"><a href="Galeria/14.-Alberca.jpg" class="glightbox"><img src="Galeria/14.-Alberca.jpg" class="w-full h-full object-cover rounded-lg" alt=""></a></div>
+    <div class="swiper-slide"><a href="Galeria/15.-AlbercaNoche.jpg" class="glightbox"><img src="Galeria/15.-AlbercaNoche.jpg" class="w-full h-full object-cover rounded-lg" alt=""></a></div>
+    <div class="swiper-slide"><a href="Galeria/16.-AlbercaNoche.jpg" class="glightbox"><img src="Galeria/16.-AlbercaNoche.jpg" class="w-full h-full object-cover rounded-lg" alt=""></a></div>
     </div>
     <div class="swiper-pagination"></div>
   </div>
@@ -145,7 +153,7 @@ body { font-family: 'Montserrat', sans-serif; }
 <section id="reserva" class="py-12 bg-white text-center">
   <div class="max-w-5xl mx-auto px-4">
     <h2 class="text-3xl logo-font mb-4">Reserva en Airbnb</h2>
-    <div class="airbnb-embed-frame" data-id="1128890516116144398" data-view="home" data-hide-price="true" style="width: 450px; height: 300px; margin: auto;">
+    <div class="airbnb-embed-frame" data-id="1128890516116144398" data-view="home" data-hide-price="true" style="width:100%; max-width:450px; height:300px; margin:auto;">
     <a href="https://www.airbnb.mx/rooms/1128890516116144398?guests=1&amp;adults=1&amp;s=66&amp;source=embed_widget">Ver en Airbnb</a>
     <a href="https://www.airbnb.mx/rooms/1128890516116144398?guests=1&amp;adults=1&amp;s=66&amp;source=embed_widget" rel="nofollow">Cabaña · Calvillo · ★5.0 · 3 habitaciones · 9 camas · 4 baños</a>
     <script async src="https://www.airbnb.mx/embeddable/airbnb_jssdk"></script>
@@ -167,7 +175,7 @@ body { font-family: 'Montserrat', sans-serif; }
   </div>
 </section>
 <a href="https://wa.me/5214491108028" class="fixed bottom-4 right-4 bg-green-500 text-white p-4 rounded-full shadow-lg" target="_blank" aria-label="WhatsApp">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="h-8 w-8"><path fill="currentColor" d="M380.9 97.1C339-12.5 216.9-33 127 6.2 70.3 32.1 26 77.8 9.2 137.3c-19 69.5 3.9 142.9 59.5 189.7l-9.4 69.5 70.4-18.4c42.9 23.6 92.1 29.3 138.4 16.3 70.5-19 124.9-72.2 141.4-142.2 13.2-54.8 4-112-28.6-159.6zM232 367.9c-38.6 0-76.9-10.4-110-30l-7.9-4.7-41.8 11 11.1-40.8-5.2-8.1c-21-32.7-32.7-71.8-32.7-111.8 0-114.5 93-207.5 207.5-207.5 55.5 0 107.5 21.7 146.7 61 39.2 39.2 60.9 91.2 60.9 146.7 0 114.5-93 207.5-207.5 207.5z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-8 h-auto"><path fill="currentColor" d="M380.9 97.1C339-12.5 216.9-33 127 6.2 70.3 32.1 26 77.8 9.2 137.3c-19 69.5 3.9 142.9 59.5 189.7l-9.4 69.5 70.4-18.4c42.9 23.6 92.1 29.3 138.4 16.3 70.5-19 124.9-72.2 141.4-142.2 13.2-54.8 4-112-28.6-159.6zM232 367.9c-38.6 0-76.9-10.4-110-30l-7.9-4.7-41.8 11 11.1-40.8-5.2-8.1c-21-32.7-32.7-71.8-32.7-111.8 0-114.5 93-207.5 207.5-207.5 55.5 0 107.5 21.7 146.7 61 39.2 39.2 60.9 91.2 60.9 146.7 0 114.5-93 207.5-207.5 207.5z"/></svg>
 </a>
 <footer class="bg-gray-800 text-white text-center p-4 mt-12">
   <p>Síguenos en <a href="https://www.facebook.com/VillaLaPerlaAgs" class="underline">Facebook</a></p>
