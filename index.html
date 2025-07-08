@@ -15,8 +15,6 @@
 <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
 <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.5/index.global.min.css" />
-<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.5/index.global.min.js"></script>
 <style>
 body { font-family: 'Montserrat', sans-serif; }
 .logo-font { font-family: 'Dancing Script', cursive; }
@@ -244,7 +242,17 @@ body { font-family: 'Montserrat', sans-serif; }
 <section id="calendario" class="py-12 bg-gray-100">
   <div class="max-w-5xl mx-auto px-4">
     <h2 class="text-center text-3xl logo-font mb-4">Disponibilidad</h2>
-    <div id="calendar" class="max-w-4xl mx-auto"></div>
+    <p class="text-justify mb-4">
+      En Villa La Perla te ayudamos a elegir la fecha perfecta para tu estancia. Consulta la disponibilidad enviando un mensaje por nuestros medios de contacto, principalmente WhatsApp.
+    </p>
+    <p class="text-justify mb-6">
+      Para tu tranquilidad, las reservaciones pueden gestionarse v&iacute;a <a href="#reserva" class="text-blue-600 underline">Airbnb</a>.
+    </p>
+    <div class="text-center">
+      <a href="https://wa.me/5214491108028" target="_blank" class="inline-flex items-center bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full font-semibold">
+        <img src="WhatsApp.svg" alt="WhatsApp" class="w-5 h-5 mr-2">Contactar por WhatsApp
+      </a>
+    </div>
   </div>
 </section>
 <section id="faq" class="py-12">
@@ -356,15 +364,6 @@ body { font-family: 'Montserrat', sans-serif; }
       pagination: { el: '.swiper-pagination', clickable: true }
     });
     GLightbox({ selector: '.glightbox' });
-    const calendarEl = document.getElementById('calendar');
-    const calendar = new FullCalendar.Calendar(calendarEl, {
-      initialView: 'dayGridMonth',
-      locale: 'es',
-      events: [
-        { title: 'Ocupado', start: '2025-07-10', end: '2025-07-15' }
-      ]
-    });
-    calendar.render();
     const nav = document.getElementById('main-nav');
     const openBtn = document.getElementById('open-menu');
     const closeBtn = document.getElementById('close-menu');
