@@ -20,6 +20,7 @@
 <style>
 body { font-family: 'Montserrat', sans-serif; }
 .logo-font { font-family: 'Dancing Script', cursive; }
+.gallery-swiper .swiper-slide { width: 250px; }
 </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
@@ -36,13 +37,16 @@ body { font-family: 'Montserrat', sans-serif; }
     </div>
   </div>
 </section>
-<section id="sobre" class="py-12 px-4 text-center">
-  <h2 class="text-3xl logo-font mb-4">Sobre la Villa</h2>
-  <p class="max-w-2xl mx-auto">Villa La Perla es una acogedora casa de campo ubicada en la reserva ecológica "La Calixtina" en Calvillo, Aguascalientes. Disfruta de un ambiente natural, cómodo y relajante.</p>
+<section id="sobre" class="py-12">
+  <div class="max-w-5xl mx-auto px-4 text-center">
+    <h2 class="text-3xl logo-font mb-4">Sobre la Villa</h2>
+    <p>Villa La Perla es una acogedora casa de campo ubicada en la reserva ecológica "La Calixtina" en Calvillo, Aguascalientes. Disfruta de un ambiente natural, cómodo y relajante.</p>
+  </div>
 </section>
-<section id="caracteristicas" class="py-12 px-4 bg-gray-100">
-  <h2 class="text-center text-3xl logo-font mb-4">Lo que ofrece este lugar</h2>
-  <ul class="max-w-3xl mx-auto list-disc list-inside space-y-1 text-left">
+<section id="caracteristicas" class="py-12 bg-gray-100">
+  <div class="max-w-5xl mx-auto px-4">
+    <h2 class="text-center text-3xl logo-font mb-4">Lo que ofrece este lugar</h2>
+    <ul class="list-disc list-inside space-y-1 text-left">
     <li>Baño, productos de limpieza, shampoo, acondicionador y jabón corporal.</li>
     <li>Lavadora, secadora, ganchos y ropa de cama.</li>
     <li>TV y sistema de sonido.</li>
@@ -53,11 +57,13 @@ body { font-family: 'Montserrat', sans-serif; }
     <li>Patio con área para fogata, muebles y comedor exterior.</li>
     <li>Estacionamiento gratuito, alberca y jacuzzi.</li>
     <li>Opción de dejar el equipaje y estancias largas.</li>
-  </ul>
+    </ul>
+  </div>
 </section>
 <section id="galeria" class="bg-white py-12">
-  <h2 class="text-center text-3xl logo-font mb-8">Galería</h2>
-  <div class="swiper gallery-swiper px-4">
+  <div class="max-w-5xl mx-auto px-4">
+    <h2 class="text-center text-3xl logo-font mb-8">Galería</h2>
+    <div class="swiper gallery-swiper">
     <div class="swiper-wrapper">
       <div class="swiper-slide"><img src="Galeria/1.-Comedor.jpg" class="w-full object-cover rounded-lg" alt=""></div>
       <div class="swiper-slide"><img src="Galeria/2.-Recamara1.jpg" class="w-full object-cover rounded-lg" alt=""></div>
@@ -65,20 +71,24 @@ body { font-family: 'Montserrat', sans-serif; }
     </div>
     <div class="swiper-pagination"></div>
   </div>
-  <div class="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-4 px-4">
+    <div class="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-4">
     <a href="Galeria/4.-Recamara3.jpg" class="glightbox"><img src="Galeria/4.-Recamara3.jpg" class="w-full object-cover rounded-lg" alt=""></a>
     <a href="Galeria/5.-Jacuzzi.jpg" class="glightbox"><img src="Galeria/5.-Jacuzzi.jpg" class="w-full object-cover rounded-lg" alt=""></a>
     <a href="Galeria/8.-Terraza1.jpg" class="glightbox"><img src="Galeria/8.-Terraza1.jpg" class="w-full object-cover rounded-lg" alt=""></a>
     <a href="Galeria/13.-Alberca.jpg" class="glightbox"><img src="Galeria/13.-Alberca.jpg" class="w-full object-cover rounded-lg" alt=""></a>
+    </div>
   </div>
 </section>
 <section id="calendario" class="py-12 bg-gray-100">
-  <h2 class="text-center text-3xl logo-font mb-4">Disponibilidad</h2>
-  <div id="calendar" class="max-w-4xl mx-auto"></div>
+  <div class="max-w-5xl mx-auto px-4">
+    <h2 class="text-center text-3xl logo-font mb-4">Disponibilidad</h2>
+    <div id="calendar" class="max-w-4xl mx-auto"></div>
+  </div>
 </section>
-<section id="faq" class="py-12 px-4">
-  <h2 class="text-center text-3xl logo-font mb-4">Preguntas frecuentes</h2>
-  <div class="max-w-xl mx-auto" x-data="{open:null}">
+<section id="faq" class="py-12">
+  <div class="max-w-5xl mx-auto px-4">
+    <h2 class="text-center text-3xl logo-font mb-4">Preguntas frecuentes</h2>
+    <div class="max-w-xl mx-auto" x-data="{open:null}">
     <div class="border-b py-2">
       <h3><button class="w-full text-left font-semibold" @click="open===1?open=null:open=1">¿Cuántas personas pueden hospedarse?</button></h3>
       <p x-show="open===1" class="mt-2">La villa tiene capacidad para 8 huéspedes.</p>
@@ -91,11 +101,13 @@ body { font-family: 'Montserrat', sans-serif; }
       <h3><button class="w-full text-left font-semibold" @click="open===3?open=null:open=3">¿Cuál es el horario de entrada y salida?</button></h3>
       <p x-show="open===3" class="mt-2">Entrada a partir de las 3 pm y salida antes de las 12 pm.</p>
     </div>
+    </div>
   </div>
 </section>
-<section id="testimonios" class="bg-white py-12 px-4" x-data="testimonialApp()" x-init="init()">
-  <h2 class="text-center text-3xl logo-font mb-4">Comentarios</h2>
-  <div class="space-y-4 max-w-xl mx-auto">
+<section id="testimonios" class="bg-white py-12" x-data="testimonialApp()" x-init="init()">
+  <div class="max-w-5xl mx-auto px-4">
+    <h2 class="text-center text-3xl logo-font mb-4">Comentarios</h2>
+    <div class="space-y-4 max-w-xl mx-auto">
     <template x-for="(t, index) in testimonials" :key="index">
       <div class="p-4 bg-gray-100 rounded">
         <div class="flex text-yellow-500 mb-1">
@@ -108,7 +120,7 @@ body { font-family: 'Montserrat', sans-serif; }
       </div>
     </template>
   </div>
-  <form class="mt-8 space-y-4 max-w-xl mx-auto" @submit.prevent="addTestimonial">
+    <form class="mt-8 space-y-4 max-w-xl mx-auto" @submit.prevent="addTestimonial">
     <input type="text" placeholder="Nombre" x-model="nuevo.nombre" required class="w-full border rounded p-2" />
     <textarea placeholder="Mensaje" x-model="nuevo.mensaje" required class="w-full border rounded p-2"></textarea>
     <select x-model="nuevo.calificacion" required class="w-full border rounded p-2">
@@ -120,19 +132,23 @@ body { font-family: 'Montserrat', sans-serif; }
       <option value="5">5</option>
     </select>
     <button type="submit" class="bg-amber-500 text-white px-4 py-2 rounded">Enviar</button>
-  </form>
+    </form>
+  </div>
 </section>
-<section id="reserva" class="py-12 px-4 bg-white text-center">
-  <h2 class="text-3xl logo-font mb-4">Reserva en Airbnb</h2>
-  <div class="airbnb-embed-frame" data-id="1128890516116144398" data-view="home" data-hide-price="true" style="width: 450px; height: 300px; margin: auto;">
+<section id="reserva" class="py-12 bg-white text-center">
+  <div class="max-w-5xl mx-auto px-4">
+    <h2 class="text-3xl logo-font mb-4">Reserva en Airbnb</h2>
+    <div class="airbnb-embed-frame" data-id="1128890516116144398" data-view="home" data-hide-price="true" style="width: 450px; height: 300px; margin: auto;">
     <a href="https://www.airbnb.mx/rooms/1128890516116144398?guests=1&amp;adults=1&amp;s=66&amp;source=embed_widget">Ver en Airbnb</a>
     <a href="https://www.airbnb.mx/rooms/1128890516116144398?guests=1&amp;adults=1&amp;s=66&amp;source=embed_widget" rel="nofollow">Cabaña · Calvillo · ★5.0 · 3 habitaciones · 9 camas · 4 baños</a>
     <script async src="https://www.airbnb.mx/embeddable/airbnb_jssdk"></script>
+    </div>
   </div>
 </section>
-<section id="contacto" class="py-12 px-4 bg-gray-100">
-  <h2 class="text-center text-3xl logo-font mb-4">Contáctanos</h2>
-  <form class="max-w-xl mx-auto space-y-4" action="mailto:villalaperla1@gmail.com" method="post" enctype="text/plain">
+<section id="contacto" class="py-12 bg-gray-100">
+  <div class="max-w-5xl mx-auto px-4">
+    <h2 class="text-center text-3xl logo-font mb-4">Contáctanos</h2>
+    <form class="max-w-xl mx-auto space-y-4" action="mailto:villalaperla1@gmail.com" method="post" enctype="text/plain">
     <input type="text" name="nombre" placeholder="Nombre" required class="w-full border rounded p-2" />
     <input type="email" name="correo" placeholder="Correo" required class="w-full border rounded p-2" />
     <textarea name="mensaje" placeholder="Mensaje" required class="w-full border rounded p-2"></textarea>
@@ -140,6 +156,7 @@ body { font-family: 'Montserrat', sans-serif; }
   </form>
   <div class="mt-8">
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4394.026996501516!2d-102.7768482241435!3d21.807530560574886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8429cb00636cc6c5%3A0x1845a654b7b07076!2sVilla%20la%20Perla!5e1!3m2!1ses-419!2smx!4v1751994245633!5m2!1ses-419!2smx" width="100%" height="300" style="border:0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
   </div>
 </section>
 <a href="https://wa.me/5214491108028" class="fixed bottom-4 right-4 bg-green-500 text-white p-4 rounded-full shadow-lg" target="_blank" aria-label="WhatsApp">
@@ -152,7 +169,18 @@ body { font-family: 'Montserrat', sans-serif; }
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     new Swiper('.gallery-swiper', {
+      effect: 'coverflow',
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: 'auto',
       loop: true,
+      coverflowEffect: {
+        rotate: 30,
+        stretch: 0,
+        depth: 200,
+        modifier: 1,
+        slideShadows: true
+      },
       pagination: { el: '.swiper-pagination', clickable: true }
     });
     GLightbox({ selector: '.glightbox' });
