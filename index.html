@@ -50,18 +50,18 @@ body { font-family: 'Montserrat', sans-serif; }
     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
   </svg>
 </button>
-<nav :class="{'-translate-x-full':!menuOpen}" class="fixed top-0 left-0 w-56 h-full bg-white shadow transform transition-transform -translate-x-full md:translate-x-0 md:block z-40">
+<nav @click.outside="menuOpen=false" :class="{'-translate-x-full':!menuOpen}" class="fixed top-0 left-0 w-56 h-full bg-[#f5f5dc] shadow transform transition-transform -translate-x-full md:translate-x-0 md:block z-40">
   <button @click="menuOpen=false" class="absolute top-4 right-4 md:hidden text-xl">&times;</button>
   <ul class="mt-16 space-y-4 p-4">
-    <li><a href="#sobre" @click="menuOpen=false" class="block hover:underline">Sobre la Villa</a></li>
-    <li><a href="#instalaciones" @click="menuOpen=false" class="block hover:underline">Instalaciones</a></li>
-    <li><a href="#galeria" @click="menuOpen=false" class="block hover:underline">Galería</a></li>
-    <li><a href="#caracteristicas" @click="menuOpen=false" class="block hover:underline">Amenidades</a></li>
-    <li><a href="#calendario" @click="menuOpen=false" class="block hover:underline">Disponibilidad</a></li>
-    <li><a href="#testimonios" @click="menuOpen=false" class="block hover:underline">Comentarios</a></li>
-    <li><a href="#reserva" @click="menuOpen=false" class="block hover:underline">Reserva</a></li>
-    <li><a href="#contacto" @click="menuOpen=false" class="block hover:underline">Contacto</a></li>
-    <li><a href="#como-llegar" @click="menuOpen=false" class="block hover:underline">¿Cómo llegar?</a></li>
+    <li><a href="#sobre" @click="menuOpen=false" class="block px-2 py-1 rounded hover:bg-amber-200 hover:underline">Sobre la Villa</a></li>
+    <li><a href="#instalaciones" @click="menuOpen=false" class="block px-2 py-1 rounded hover:bg-amber-200 hover:underline">Instalaciones</a></li>
+    <li><a href="#galeria" @click="menuOpen=false" class="block px-2 py-1 rounded hover:bg-amber-200 hover:underline">Galería</a></li>
+    <li><a href="#caracteristicas" @click="menuOpen=false" class="block px-2 py-1 rounded hover:bg-amber-200 hover:underline">Amenidades</a></li>
+    <li><a href="#calendario" @click="menuOpen=false" class="block px-2 py-1 rounded hover:bg-amber-200 hover:underline">Disponibilidad</a></li>
+    <li><a href="#testimonios" @click="menuOpen=false" class="block px-2 py-1 rounded hover:bg-amber-200 hover:underline">Comentarios</a></li>
+    <li><a href="#reserva" @click="menuOpen=false" class="block px-2 py-1 rounded hover:bg-amber-200 hover:underline">Reserva</a></li>
+    <li><a href="#contacto" @click="menuOpen=false" class="block px-2 py-1 rounded hover:bg-amber-200 hover:underline">Contacto</a></li>
+    <li><a href="#como-llegar" @click="menuOpen=false" class="block px-2 py-1 rounded hover:bg-amber-200 hover:underline">¿Cómo llegar?</a></li>
   </ul>
 </nav>
 <section class="relative min-h-screen">
@@ -208,8 +208,8 @@ body { font-family: 'Montserrat', sans-serif; }
     <div class="swiper-slide"><a href="Galeria/3.-Recamara2.jpg" class="glightbox"><img src="Galeria/3.-Recamara2.jpg" class="w-full h-full object-cover rounded-lg" alt=""></a></div>
     <div class="swiper-slide"><a href="Galeria/4.-Recamara3.jpg" class="glightbox"><img src="Galeria/4.-Recamara3.jpg" class="w-full h-full object-cover rounded-lg" alt=""></a></div>
     <div class="swiper-slide"><a href="Galeria/5.-Jacuzzi.jpg" class="glightbox"><img src="Galeria/5.-Jacuzzi.jpg" class="w-full h-full object-cover rounded-lg" alt=""></a></div>
-    <div class="swiper-slide"><a href="Galeria/6.-Bano.jpg" class="glightbox"><img src="Galeria/6.-Baño.jpg" class="w-full h-full object-cover rounded-lg" alt=""></a></div>
-    <div class="swiper-slide"><a href="Galeria/7.-Bano.jpg" class="glightbox"><img src="Galeria/7.-Baño.jpg" class="w-full h-full object-cover rounded-lg" alt=""></a></div>
+    <div class="swiper-slide"><a href="Galeria/6.-Bano.jpg" class="glightbox"><img src="Galeria/6.-Bano.jpg" class="w-full h-full object-cover rounded-lg" alt=""></a></div>
+    <div class="swiper-slide"><a href="Galeria/7.-Bano.jpg" class="glightbox"><img src="Galeria/7.-Bano.jpg" class="w-full h-full object-cover rounded-lg" alt=""></a></div>
     <div class="swiper-slide"><a href="Galeria/8.-Terraza1.jpg" class="glightbox"><img src="Galeria/8.-Terraza1.jpg" class="w-full h-full object-cover rounded-lg" alt=""></a></div>
     <div class="swiper-slide"><a href="Galeria/9.-Terraza2.jpg" class="glightbox"><img src="Galeria/9.-Terraza2.jpg" class="w-full h-full object-cover rounded-lg" alt=""></a></div>
     <div class="swiper-slide"><a href="Galeria/10.-Exterior.jpg" class="glightbox"><img src="Galeria/10.-Exterior.jpg" class="w-full h-full object-cover rounded-lg" alt=""></a></div>
