@@ -50,7 +50,7 @@ body { font-family: 'Montserrat', sans-serif; }
     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
   </svg>
 </button>
-<nav @click.outside="menuOpen=false" :class="{'-translate-x-full':!menuOpen}" class="fixed top-0 left-0 w-56 h-full bg-[#f5f5dc] shadow transform transition-transform -translate-x-full md:translate-x-0 md:block z-40">
+<nav @click.outside="menuOpen=false" :class="{'-translate-x-full':!menuOpen}" class="fixed top-0 left-0 w-56 h-full bg-[#f5f5dc] shadow transform transition-transform md:translate-x-0 md:block z-40">
   <button @click="menuOpen=false" class="absolute top-4 right-4 md:hidden text-xl">&times;</button>
   <ul class="mt-16 space-y-4 p-4">
     <li><a href="#sobre" @click="menuOpen=false" class="block px-2 py-1 rounded hover:bg-amber-200 hover:underline">Sobre la Villa</a></li>
@@ -92,7 +92,7 @@ body { font-family: 'Montserrat', sans-serif; }
           <span class="flex items-center"><svg class="w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2a9.99 9.99 0 00-3 19.49v-4.77c-.61-.3-1-.9-1-1.59V13a1 1 0 01.54-.89l2.94-1.47a1 1 0 01.92 0l2.94 1.47A1 1 0 0116 13v2.13c0 .69-.39 1.29-1 1.59v4.77A10 10 0 0012 2z"/></svg>Alberca climatizada</span>
           <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
         </button>
-        <div x-show="open===1" class="p-4 pt-0 space-y-2">
+        <div x-show="open===1" class="p-4 pt-0 space-y-2 text-justify">
           <p>Disfruta de nuestra alberca climatizada durante todo el a&ntilde;o. Mantiene una temperatura ideal para nadar sin importar el clima. Perfecta para relajarte o divertirte con la familia.</p>
         </div>
       </div>
@@ -101,7 +101,7 @@ body { font-family: 'Montserrat', sans-serif; }
           <span class="flex items-center"><svg class="w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M12.963 2.286a.75.75 0 00-1.071-.136 9.742 9.742 0 00-3.539 6.177A7.547 7.547 0 016.648 6.61a.75.75 0 00-1.152-.082A9 9 0 1015.68 4.534a7.46 7.46 0 01-2.717-2.248zM15.75 14.25a3.75 3.75 0 11-7.313-1.172c.628.465 1.35.81 2.133 1a5.99 5.99 0 011.925-3.545 3.75 3.75 0 013.255 3.717z"/></svg>Jacuzzi privado</span>
           <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
         </button>
-        <div x-show="open===2" class="p-4 pt-0 space-y-2">
+        <div x-show="open===2" class="p-4 pt-0 space-y-2 text-justify">
           <p>Rel&aacute;jate en el jacuzzi con agua caliente y burbujeante. Es un espacio &iacute;ntimo para descansar despu&eacute;s de un d&iacute;a de actividades. Ideal para compartir un momento especial.</p>
         </div>
       </div>
@@ -110,7 +110,7 @@ body { font-family: 'Montserrat', sans-serif; }
           <span class="flex items-center"><svg class="w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M3 12a9 9 0 0118 0v7.5a2.25 2.25 0 01-2.25 2.25h-1.5a.75.75 0 01-.75-.75V12a4.5 4.5 0 10-9 0v9a.75.75 0 01-.75.75h-1.5A2.25 2.25 0 013 19.5V12z"/></svg>Zona de terraza con asador</span>
           <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
         </button>
-        <div x-show="open===3" class="p-4 pt-0 space-y-2">
+        <div x-show="open===3" class="p-4 pt-0 space-y-2 text-justify">
           <p>Comparte una deliciosa parrillada en nuestra terraza equipada. El asador est&aacute; listo para tus mejores recetas. Es el lugar perfecto para convivir al aire libre.</p>
         </div>
       </div>
@@ -119,7 +119,7 @@ body { font-family: 'Montserrat', sans-serif; }
           <span class="flex items-center"><svg class="w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M13.5 2.25a.75.75 0 00-3 0V3a9 9 0 013 0v-.75zM6 4.5h12a1.5 1.5 0 011.5 1.5v3a6 6 0 11-15 0v-3A1.5 1.5 0 016 4.5z"/><path d="M3 14.25a9 9 0 1018 0V13.5H3v.75z"/></svg>Zona margaritaville</span>
           <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
         </button>
-        <div x-show="open===4" class="p-4 pt-0 space-y-2">
+        <div x-show="open===4" class="p-4 pt-0 space-y-2 text-justify">
           <p>Disfruta de bebidas frescas en nuestra zona margaritaville. Aqu&iacute; encontrar&aacute;s el ambiente ideal para relajarte con m&uacute;sica y amigos. Perfecto para celebrar al atardecer.</p>
         </div>
       </div>
@@ -128,7 +128,7 @@ body { font-family: 'Montserrat', sans-serif; }
           <span class="flex items-center"><svg class="w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M10.5 3.75a.75.75 0 00-1.5 0V6a6 6 0 0012 0V3.75a.75.75 0 00-1.5 0V6a4.5 4.5 0 01-9 0V3.75z"/><path d="M4.5 9A1.5 1.5 0 003 10.5v8.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V10.5A1.5 1.5 0 0019.5 9h-15z"/></svg>3 habitaciones (2, 4 y 8 personas)</span>
           <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
         </button>
-        <div x-show="open===5" class="p-4 pt-0 space-y-2">
+        <div x-show="open===5" class="p-4 pt-0 space-y-2 text-justify">
           <p>Nuestras habitaciones est&aacute;n dise&ntilde;adas para diferentes grupos. Cada una cuenta con comodidades pensadas para tu descanso. Puedes hospedar desde parejas hasta grupos grandes.</p>
         </div>
       </div>
@@ -137,7 +137,7 @@ body { font-family: 'Montserrat', sans-serif; }
           <span class="flex items-center"><svg class="w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M3 3.75A.75.75 0 013.75 3h16.5a.75.75 0 01.75.75v3.5a.75.75 0 01-.75.75H3.75A.75.75 0 013 7.25v-3.5z"/><path d="M3 9.75A.75.75 0 013.75 9h16.5a.75.75 0 01.75.75v4.5a.75.75 0 01-.75.75H3.75A.75.75 0 013 14.25v-4.5z"/><path d="M3 18.75A.75.75 0 013.75 18h16.5a.75.75 0 01.75.75v1.5a.75.75 0 01-.75.75H3.75A.75.75 0 013 21v-1.5z"/></svg>Cocina equipada, sala y comedor</span>
           <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
         </button>
-        <div x-show="open===6" class="p-4 pt-0 space-y-2">
+        <div x-show="open===6" class="p-4 pt-0 space-y-2 text-justify">
           <p>Prepara tus alimentos en la cocina completamente equipada. Comparte momentos en la sala y comedor de concepto abierto. Todo lo necesario para sentirte como en casa.</p>
         </div>
       </div>
@@ -146,7 +146,7 @@ body { font-family: 'Montserrat', sans-serif; }
           <span class="flex items-center"><svg class="w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M5.25 2.25a.75.75 0 000 1.5H7.5A2.25 2.25 0 019.75 6v9.75a.75.75 0 01-.75.75H8.25A1.5 1.5 0 006.75 18v4.5h10.5V18a1.5 1.5 0 00-1.5-1.5h-.75a.75.75 0 01-.75-.75V6A2.25 2.25 0 0117.25 3h2.25a.75.75 0 000-1.5h-14.25z"/></svg>Zona de camastros</span>
           <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
         </button>
-        <div x-show="open===7" class="p-4 pt-0 space-y-2">
+        <div x-show="open===7" class="p-4 pt-0 space-y-2 text-justify">
           <p>Toma el sol en la zona de camastros junto a la alberca. Es el lugar perfecto para broncearte y descansar. Disfruta de la vista mientras te relajas.</p>
         </div>
       </div>
@@ -155,7 +155,7 @@ body { font-family: 'Montserrat', sans-serif; }
           <span class="flex items-center"><svg class="w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M2.25 6A2.25 2.25 0 014.5 3.75h15A2.25 2.25 0 0121.75 6v12A2.25 2.25 0 0119.5 20.25h-15A2.25 2.25 0 012.25 18V6z"/></svg>TV y Wi-fi</span>
           <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
         </button>
-        <div x-show="open===8" class="p-4 pt-0 space-y-2">
+        <div x-show="open===8" class="p-4 pt-0 space-y-2 text-justify">
           <p>Mant&eacute;n la conexi&oacute;n con nuestro servicio de Wi-Fi en toda la villa. Adem&aacute;s, disfruta de televisi&oacute;n para tus momentos de ocio. La combinaci&oacute;n perfecta de naturaleza y tecnolog&iacute;a.</p>
         </div>
       </div>
@@ -164,7 +164,7 @@ body { font-family: 'Montserrat', sans-serif; }
           <span class="flex items-center"><svg class="w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M12.963 2.286a.75.75 0 00-1.071-.136 9.742 9.742 0 00-3.539 6.177A7.547 7.547 0 016.648 6.61a.75.75 0 00-1.152-.082A9 9 0 1015.68 4.534a7.46 7.46 0 01-2.717-2.248zM15.75 14.25a3.75 3.75 0 11-7.313-1.172c.628.465 1.35.81 2.133 1a5.99 5.99 0 011.925-3.545 3.75 3.75 0 013.255 3.717z"/></svg>Área de fogata</span>
           <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
         </button>
-        <div x-show="open===9" class="p-4 pt-0 space-y-2">
+        <div x-show="open===9" class="p-4 pt-0 space-y-2 text-justify">
           <p>Por las noches enciende una fogata y comparte historias bajo las estrellas. Contamos con un espacio seguro para disfrutar el fuego. Una experiencia acogedora para todos.</p>
         </div>
       </div>
@@ -173,7 +173,7 @@ body { font-family: 'Montserrat', sans-serif; }
           <span class="flex items-center"><svg class="w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M3 13.5A4.5 4.5 0 017.5 9h9A4.5 4.5 0 0121 13.5v4.125c0 .414-.336.75-.75.75h-3.375a.375.375 0 01-.375-.375V18a2.25 2.25 0 00-4.5 0v.75a.375.375 0 01-.375.375H7.5a.75.75 0 01-.75-.75V13.5z"/></svg>Estacionamiento privado</span>
           <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
         </button>
-        <div x-show="open===10" class="p-4 pt-0 space-y-2">
+        <div x-show="open===10" class="p-4 pt-0 space-y-2 text-justify">
           <p>Tus veh&iacute;culos estar&aacute;n seguros en nuestro estacionamiento privado. El acceso es exclusivo para nuestros hu&eacute;spedes. Puedes olvidarte de preocupaciones durante tu estancia.</p>
         </div>
       </div>
@@ -182,7 +182,7 @@ body { font-family: 'Montserrat', sans-serif; }
           <span class="flex items-center"><svg class="w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M2.25 5.25a.75.75 0 01.75-.75h18a.75.75 0 01.75.75v13.5a.75.75 0 01-.75.75H3a.75.75 0 01-.75-.75V5.25z"/><path d="M7.5 9.75a1.5 1.5 0 013 0v1.5a1.5 1.5 0 01-3 0v-1.5zM13.5 9.75a1.5 1.5 0 013 0v1.5a1.5 1.5 0 01-3 0v-1.5z"/></svg>Hermoso paisaje a la sierra del laurel</span>
           <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
         </button>
-        <div x-show="open===11" class="p-4 pt-0 space-y-2">
+        <div x-show="open===11" class="p-4 pt-0 space-y-2 text-justify">
           <p>Despierta con una vista impresionante de la sierra del Laurel. El entorno natural te invita a descansar y reconectar. Cada amanecer es un espect&aacute;culo inolvidable.</p>
         </div>
       </div>
@@ -191,7 +191,7 @@ body { font-family: 'Montserrat', sans-serif; }
           <span class="flex items-center"><svg class="w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M10.5 3.75a.75.75 0 011.5 0v5.364l3.385-3.384a.75.75 0 111.06 1.06L12 11.25l-4.445-4.46a.75.75 0 111.06-1.06L10.5 9.114V3.75z"/><path d="M2.25 15a5.25 5.25 0 015.25-5.25h9a5.25 5.25 0 015.25 5.25V20.5a.75.75 0 01-.75.75h-18a.75.75 0 01-.75-.75V15z"/></svg>Espacios ideales para relajarse</span>
           <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
         </button>
-        <div x-show="open===12" class="p-4 pt-0 space-y-2">
+        <div x-show="open===12" class="p-4 pt-0 space-y-2 text-justify">
           <p>Cada rinc&oacute;n de la villa est&aacute; pensado para tu confort. Encuentra &aacute;reas tranquilas para leer, meditar o simplemente descansar. D&eacute;jate envolver por la calma del lugar.</p>
         </div>
       </div>
@@ -227,7 +227,7 @@ body { font-family: 'Montserrat', sans-serif; }
 <section id="caracteristicas" class="py-12 bg-gray-100">
   <div class="max-w-5xl mx-auto px-4">
     <h2 class="text-center text-3xl logo-font mb-4">Amenidades</h2>
-    <ul class="list-disc list-inside space-y-1 text-left">
+    <ul class="list-disc list-inside space-y-1 text-left ml-8">
     <li>Baño, productos de limpieza, shampoo, acondicionador y jabón corporal.</li>
     <li>Lavadora, secadora, ganchos y ropa de cama.</li>
     <li>TV y sistema de sonido.</li>
