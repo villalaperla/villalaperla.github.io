@@ -379,22 +379,25 @@ body { font-family: 'Montserrat', sans-serif; }
       if(!nav.contains(e.target) && !openBtn.contains(e.target)) hide();
     });
   });
-  function testimonialApp(){
-    return {
-      testimonials: [],
-      nuevo: {nombre: '', mensaje: '', calificacion: 5},
-      async init(){
-        const res = await fetch('testimonials.json');
-        this.testimonials = await res.json();
-      },
-      addTestimonial(){
-        if(this.nuevo.nombre && this.nuevo.mensaje && this.nuevo.calificacion){
-          this.testimonials.push({...this.nuevo});
-          this.nuevo = {nombre:'',mensaje:'',calificacion:5};
+    function testimonialApp(){
+      return {
+        testimonials: [],
+        nuevo: {nombre: '', mensaje: '', calificacion: 5},
+        async init(){
+          const res = await fetch('testimonials.json');
+          const defaults = await res.json();
+          const stored = localStorage.getItem('testimonials');
+          this.testimonials = stored ? JSON.parse(stored) : defaults;
+        },
+        addTestimonial(){
+          if(this.nuevo.nombre && this.nuevo.mensaje && this.nuevo.calificacion){
+            this.testimonials.push({...this.nuevo});
+            localStorage.setItem('testimonials', JSON.stringify(this.testimonials));
+            this.nuevo = {nombre:'',mensaje:'',calificacion:5};
+          }
         }
       }
     }
-  }
 </script>
 </body>
 </html>
