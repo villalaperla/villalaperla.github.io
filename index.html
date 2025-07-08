@@ -24,10 +24,10 @@ body { font-family: 'Montserrat', sans-serif; }
 </head>
 <body class="bg-gray-50 text-gray-800">
 <header class="bg-white shadow p-4 flex justify-center">
-  <img src="logo.png" alt="Villa La Perla" class="h-16" />
+  <img src="logo.png" alt="Villa La Perla" class="h-24" />
 </header>
-<section class="relative">
-  <img src="https://source.unsplash.com/random/1200x800?nature,resort" class="w-full h-64 sm:h-96 object-cover" alt="Villa">
+<section class="relative min-h-screen">
+  <img src="https://source.unsplash.com/random/1200x800?nature,resort" class="absolute inset-0 w-full h-full object-cover" alt="Villa">
   <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
     <div class="text-center text-white px-4">
       <h1 class="text-3xl sm:text-5xl font-bold logo-font">Bienvenidos a Villa La Perla</h1>
@@ -37,32 +37,47 @@ body { font-family: 'Montserrat', sans-serif; }
   </div>
 </section>
 <section id="sobre" class="py-12 px-4 text-center">
-  <h2 class="text-2xl logo-font mb-4">Sobre la Villa</h2>
+  <h2 class="text-3xl logo-font mb-4">Sobre la Villa</h2>
   <p class="max-w-2xl mx-auto">Villa La Perla es una acogedora casa de campo ubicada en la reserva ecológica "La Calixtina" en Calvillo, Aguascalientes. Disfruta de un ambiente natural, cómodo y relajante.</p>
 </section>
+<section id="caracteristicas" class="py-12 px-4 bg-gray-100">
+  <h2 class="text-center text-3xl logo-font mb-4">Lo que ofrece este lugar</h2>
+  <ul class="max-w-3xl mx-auto list-disc list-inside space-y-1 text-left">
+    <li>Baño, productos de limpieza, shampoo, acondicionador y jabón corporal.</li>
+    <li>Lavadora, secadora, ganchos y ropa de cama.</li>
+    <li>TV y sistema de sonido.</li>
+    <li>Aire acondicionado, ventilador de techo y calefacción.</li>
+    <li>Cámaras de seguridad exteriores y detector de monóxido de carbono.</li>
+    <li>Wifi y espacio de trabajo.</li>
+    <li>Cocina equipada con refrigerador, microondas y utensilios básicos.</li>
+    <li>Patio con área para fogata, muebles y comedor exterior.</li>
+    <li>Estacionamiento gratuito, alberca y jacuzzi.</li>
+    <li>Opción de dejar el equipaje y estancias largas.</li>
+  </ul>
+</section>
 <section id="galeria" class="bg-white py-12">
-  <h2 class="text-center text-2xl logo-font mb-8">Galería</h2>
+  <h2 class="text-center text-3xl logo-font mb-8">Galería</h2>
   <div class="swiper gallery-swiper px-4">
     <div class="swiper-wrapper">
-      <div class="swiper-slide"><img src="https://source.unsplash.com/random/600x400?villa1" class="w-full object-cover rounded-lg" alt=""></div>
-      <div class="swiper-slide"><img src="https://source.unsplash.com/random/600x400?villa2" class="w-full object-cover rounded-lg" alt=""></div>
-      <div class="swiper-slide"><img src="https://source.unsplash.com/random/600x400?villa3" class="w-full object-cover rounded-lg" alt=""></div>
+      <div class="swiper-slide"><img src="Galeria/1.-Comedor.jpg" class="w-full object-cover rounded-lg" alt=""></div>
+      <div class="swiper-slide"><img src="Galeria/2.-Recamara1.jpg" class="w-full object-cover rounded-lg" alt=""></div>
+      <div class="swiper-slide"><img src="Galeria/3.-Recamara2.jpg" class="w-full object-cover rounded-lg" alt=""></div>
     </div>
     <div class="swiper-pagination"></div>
   </div>
   <div class="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-4 px-4">
-    <a href="https://source.unsplash.com/random/800x600?villa4" class="glightbox"><img src="https://source.unsplash.com/random/400x300?villa4" class="w-full object-cover rounded-lg" alt=""></a>
-    <a href="https://source.unsplash.com/random/800x600?villa5" class="glightbox"><img src="https://source.unsplash.com/random/400x300?villa5" class="w-full object-cover rounded-lg" alt=""></a>
-    <a href="https://source.unsplash.com/random/800x600?villa6" class="glightbox"><img src="https://source.unsplash.com/random/400x300?villa6" class="w-full object-cover rounded-lg" alt=""></a>
-    <a href="https://source.unsplash.com/random/800x600?villa7" class="glightbox"><img src="https://source.unsplash.com/random/400x300?villa7" class="w-full object-cover rounded-lg" alt=""></a>
+    <a href="Galeria/4.-Recamara3.jpg" class="glightbox"><img src="Galeria/4.-Recamara3.jpg" class="w-full object-cover rounded-lg" alt=""></a>
+    <a href="Galeria/5.-Jacuzzi.jpg" class="glightbox"><img src="Galeria/5.-Jacuzzi.jpg" class="w-full object-cover rounded-lg" alt=""></a>
+    <a href="Galeria/8.-Terraza1.jpg" class="glightbox"><img src="Galeria/8.-Terraza1.jpg" class="w-full object-cover rounded-lg" alt=""></a>
+    <a href="Galeria/13.-Alberca.jpg" class="glightbox"><img src="Galeria/13.-Alberca.jpg" class="w-full object-cover rounded-lg" alt=""></a>
   </div>
 </section>
 <section id="calendario" class="py-12 bg-gray-100">
-  <h2 class="text-center text-2xl logo-font mb-4">Disponibilidad</h2>
+  <h2 class="text-center text-3xl logo-font mb-4">Disponibilidad</h2>
   <div id="calendar" class="max-w-4xl mx-auto"></div>
 </section>
 <section id="faq" class="py-12 px-4">
-  <h2 class="text-center text-2xl logo-font mb-4">Preguntas frecuentes</h2>
+  <h2 class="text-center text-3xl logo-font mb-4">Preguntas frecuentes</h2>
   <div class="max-w-xl mx-auto" x-data="{open:null}">
     <div class="border-b py-2">
       <h3><button class="w-full text-left font-semibold" @click="open===1?open=null:open=1">¿Cuántas personas pueden hospedarse?</button></h3>
@@ -79,10 +94,15 @@ body { font-family: 'Montserrat', sans-serif; }
   </div>
 </section>
 <section id="testimonios" class="bg-white py-12 px-4" x-data="testimonialApp()" x-init="init()">
-  <h2 class="text-center text-2xl logo-font mb-4">Comentarios</h2>
+  <h2 class="text-center text-3xl logo-font mb-4">Comentarios</h2>
   <div class="space-y-4 max-w-xl mx-auto">
     <template x-for="(t, index) in testimonials" :key="index">
       <div class="p-4 bg-gray-100 rounded">
+        <div class="flex text-yellow-500 mb-1">
+          <template x-for="i in Number(t.calificacion)">
+            <span>&#9733;</span>
+          </template>
+        </div>
         <p class="italic" x-text="t.mensaje"></p>
         <p class="text-right mt-2 font-semibold" x-text="t.nombre"></p>
       </div>
@@ -91,11 +111,19 @@ body { font-family: 'Montserrat', sans-serif; }
   <form class="mt-8 space-y-4 max-w-xl mx-auto" @submit.prevent="addTestimonial">
     <input type="text" placeholder="Nombre" x-model="nuevo.nombre" required class="w-full border rounded p-2" />
     <textarea placeholder="Mensaje" x-model="nuevo.mensaje" required class="w-full border rounded p-2"></textarea>
+    <select x-model="nuevo.calificacion" required class="w-full border rounded p-2">
+      <option value="" disabled>Calificación</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
     <button type="submit" class="bg-amber-500 text-white px-4 py-2 rounded">Enviar</button>
-</form>
+  </form>
 </section>
 <section id="reserva" class="py-12 px-4 bg-white text-center">
-  <h2 class="text-2xl logo-font mb-4">Reserva en Airbnb</h2>
+  <h2 class="text-3xl logo-font mb-4">Reserva en Airbnb</h2>
   <div class="airbnb-embed-frame" data-id="1128890516116144398" data-view="home" data-hide-price="true" style="width: 450px; height: 300px; margin: auto;">
     <a href="https://www.airbnb.mx/rooms/1128890516116144398?guests=1&amp;adults=1&amp;s=66&amp;source=embed_widget">Ver en Airbnb</a>
     <a href="https://www.airbnb.mx/rooms/1128890516116144398?guests=1&amp;adults=1&amp;s=66&amp;source=embed_widget" rel="nofollow">Cabaña · Calvillo · ★5.0 · 3 habitaciones · 9 camas · 4 baños</a>
@@ -103,7 +131,7 @@ body { font-family: 'Montserrat', sans-serif; }
   </div>
 </section>
 <section id="contacto" class="py-12 px-4 bg-gray-100">
-  <h2 class="text-center text-2xl logo-font mb-4">Contáctanos</h2>
+  <h2 class="text-center text-3xl logo-font mb-4">Contáctanos</h2>
   <form class="max-w-xl mx-auto space-y-4" action="mailto:villalaperla1@gmail.com" method="post" enctype="text/plain">
     <input type="text" name="nombre" placeholder="Nombre" required class="w-full border rounded p-2" />
     <input type="email" name="correo" placeholder="Correo" required class="w-full border rounded p-2" />
@@ -115,7 +143,7 @@ body { font-family: 'Montserrat', sans-serif; }
   </div>
 </section>
 <a href="https://wa.me/5214491108028" class="fixed bottom-4 right-4 bg-green-500 text-white p-4 rounded-full shadow-lg" target="_blank" aria-label="WhatsApp">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-6 h-6"><path fill="currentColor" d="M380.9 97.1C339-12.5 216.9-33 127 6.2 70.3 32.1 26 77.8 9.2 137.3c-19 69.5 3.9 142.9 59.5 189.7l-9.4 69.5 70.4-18.4c42.9 23.6 92.1 29.3 138.4 16.3 70.5-19 124.9-72.2 141.4-142.2 13.2-54.8 4-112-28.6-159.6zM232 367.9c-38.6 0-76.9-10.4-110-30l-7.9-4.7-41.8 11 11.1-40.8-5.2-8.1c-21-32.7-32.7-71.8-32.7-111.8 0-114.5 93-207.5 207.5-207.5 55.5 0 107.5 21.7 146.7 61 39.2 39.2 60.9 91.2 60.9 146.7 0 114.5-93 207.5-207.5 207.5z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="h-8 w-auto"><path fill="currentColor" d="M380.9 97.1C339-12.5 216.9-33 127 6.2 70.3 32.1 26 77.8 9.2 137.3c-19 69.5 3.9 142.9 59.5 189.7l-9.4 69.5 70.4-18.4c42.9 23.6 92.1 29.3 138.4 16.3 70.5-19 124.9-72.2 141.4-142.2 13.2-54.8 4-112-28.6-159.6zM232 367.9c-38.6 0-76.9-10.4-110-30l-7.9-4.7-41.8 11 11.1-40.8-5.2-8.1c-21-32.7-32.7-71.8-32.7-111.8 0-114.5 93-207.5 207.5-207.5 55.5 0 107.5 21.7 146.7 61 39.2 39.2 60.9 91.2 60.9 146.7 0 114.5-93 207.5-207.5 207.5z"/></svg>
 </a>
 <footer class="bg-gray-800 text-white text-center p-4 mt-12">
   <p>Síguenos en <a href="https://www.facebook.com/VillaLaPerlaAgs" class="underline">Facebook</a></p>
@@ -141,15 +169,15 @@ body { font-family: 'Montserrat', sans-serif; }
   function testimonialApp(){
     return {
       testimonials: [],
-      nuevo: {nombre: '', mensaje: ''},
+      nuevo: {nombre: '', mensaje: '', calificacion: 5},
       async init(){
         const res = await fetch('testimonials.json');
         this.testimonials = await res.json();
       },
       addTestimonial(){
-        if(this.nuevo.nombre && this.nuevo.mensaje){
+        if(this.nuevo.nombre && this.nuevo.mensaje && this.nuevo.calificacion){
           this.testimonials.push({...this.nuevo});
-          this.nuevo = {nombre:'',mensaje:''};
+          this.nuevo = {nombre:'',mensaje:'',calificacion:5};
         }
       }
     }
