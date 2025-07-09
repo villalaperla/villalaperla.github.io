@@ -263,16 +263,44 @@ body { font-family: 'Montserrat', sans-serif; }
     <h2 class="text-center text-3xl logo-font mb-4">Preguntas frecuentes</h2>
     <div class="max-w-xl mx-auto" x-data="{open:null}">
     <div class="border-b py-2">
-      <h3><button class="w-full text-left font-semibold" @click="open===1?open=null:open=1">¿Cuántas personas pueden hospedarse?</button></h3>
-      <p x-show="open===1" class="mt-2">La villa tiene capacidad para 14 huéspedes.</p>
+      <h3><button class="w-full text-left font-semibold" @click="open===1?open=null:open=1">¿Se requiere un anticipo para reservar?</button></h3>
+      <p x-show="open===1" class="mt-2">Sí, solicitamos un anticipo para garantizar tu fecha. Alicia te explicará el proceso paso a paso vía WhatsApp.</p>
     </div>
     <div class="border-b py-2">
-      <h3><button class="w-full text-left font-semibold" @click="open===2?open=null:open=2">¿Se permiten mascotas?</button></h3>
-      <p x-show="open===2" class="mt-2">Queda estrictamente prohibido el ingreso de mascotas.</p>
+      <h3><button class="w-full text-left font-semibold" @click="open===2?open=null:open=2">¿Cuántas personas pueden hospedarse cómodamente?</button></h3>
+      <p x-show="open===2" class="mt-2">La villa tiene capacidad total para hasta 14 personas, distribuidas en tres habitaciones amplias.</p>
     </div>
     <div class="border-b py-2">
-      <h3><button class="w-full text-left font-semibold" @click="open===3?open=null:open=3">¿Cuál es el horario de entrada y salida?</button></h3>
-      <p x-show="open===3" class="mt-2">Entrada a partir de las 2:00 pm y salida antes de las 12:00 pm.</p>
+      <h3><button class="w-full text-left font-semibold" @click="open===3?open=null:open=3">¿Hay señal de celular e internet?</button></h3>
+      <p x-show="open===3" class="mt-2">Sí, contamos con Wi-Fi gratuito y buena señal de celular en la zona.</p>
+    </div>
+    <div class="border-b py-2">
+      <h3><button class="w-full text-left font-semibold" @click="open===4?open=null:open=4">¿Se puede cocinar en la villa?</button></h3>
+      <p x-show="open===4" class="mt-2">¡Claro! La cocina está totalmente equipada con utensilios, estufa, refrigerador y microondas.</p>
+    </div>
+    <div class="border-b py-2">
+      <h3><button class="w-full text-left font-semibold" @click="open===5?open=null:open=5">¿Qué debo llevar para mi estancia?</button></h3>
+      <p x-show="open===5" class="mt-2">Solo tus artículos personales, comida y bebidas favoritas. Todo lo demás está listo para que disfrutes.</p>
+    </div>
+    <div class="border-b py-2">
+      <h3><button class="w-full text-left font-semibold" @click="open===6?open=null:open=6">¿La alberca está disponible todo el año?</button></h3>
+      <p x-show="open===6" class="mt-2">Sí, es climatizada y puede usarse en cualquier temporada.</p>
+    </div>
+    <div class="border-b py-2">
+      <h3><button class="w-full text-left font-semibold" @click="open===7?open=null:open=7">¿La zona es segura?</button></h3>
+      <p x-show="open===7" class="mt-2">Sí, es una zona tranquila dentro de una reserva ecológica, con acceso controlado y privacidad total.</p>
+    </div>
+    <div class="border-b py-2">
+      <h3><button class="w-full text-left font-semibold" @click="open===8?open=null:open=8">¿Se permite hacer eventos o celebraciones?</button></h3>
+      <p x-show="open===8" class="mt-2">Sí, con previo aviso. Podemos ayudarte a coordinar si planeas celebrar algo especial.</p>
+    </div>
+    <div class="border-b py-2">
+      <h3><button class="w-full text-left font-semibold" @click="open===9?open=null:open=9">¿La villa es pet friendly?</button></h3>
+      <p x-show="open===9" class="mt-2">Actualmente no se permite el ingreso de mascotas, para mantener las condiciones de limpieza y seguridad.</p>
+    </div>
+    <div class="border-b py-2">
+      <h3><button class="w-full text-left font-semibold" @click="open===10?open=null:open=10">¿Hay estacionamiento disponible?</button></h3>
+      <p x-show="open===10" class="mt-2">Sí, contamos con estacionamiento privado y seguro para 6 vehículos dentro de la propiedad.</p>
     </div>
     </div>
   </div>
