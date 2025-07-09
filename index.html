@@ -354,7 +354,7 @@ body { font-family: 'Montserrat', sans-serif; }
       apiKey: "AIzaSyAE7g6ycbkgDjA-smEShhmvBvhRgwdQr1U",
       authDomain: "villa-la-perla-ags.firebaseapp.com",
       projectId: "villa-la-perla-ags",
-      storageBucket: "villa-la-perla-ags.firebasestorage.app",
+      storageBucket: "villa-la-perla-ags.appspot.com",
       messagingSenderId: "717257793730",
       appId: "1:717257793730:web:46138149d8d67d5d2b1b5b",
       measurementId: "G-0TVJXCPT1Z"
@@ -398,19 +398,29 @@ body { font-family: 'Montserrat', sans-serif; }
         testimonials: [],
         nuevo: {nombre: '', mensaje: '', calificacion: 5},
         async init(){
-          const snapshot = await db.collection('testimonials').get();
-          if(snapshot.empty){
+          try {
+            const snapshot = await db.collection('testimonials').get();
+            if(snapshot.empty){
+              const res = await fetch('testimonials.json');
+              const defaults = await res.json();
+              this.testimonials = defaults;
+              defaults.forEach(t => db.collection('testimonials').add(t));
+            } else {
+              this.testimonials = snapshot.docs.map(doc => doc.data());
+            }
+          } catch(e) {
+            console.error('Failed to load testimonials', e);
             const res = await fetch('testimonials.json');
-            const defaults = await res.json();
-            this.testimonials = defaults;
-            defaults.forEach(t => db.collection('testimonials').add(t));
-          } else {
-            this.testimonials = snapshot.docs.map(doc => doc.data());
+            this.testimonials = await res.json();
           }
         },
         async addTestimonial(){
           if(this.nuevo.nombre && this.nuevo.mensaje && this.nuevo.calificacion){
-            await db.collection('testimonials').add({...this.nuevo});
+            try {
+              await db.collection('testimonials').add({...this.nuevo});
+            } catch(e) {
+              console.error('Failed to save testimonial', e);
+            }
             this.testimonials.push({...this.nuevo});
             this.nuevo = {nombre:'',mensaje:'',calificacion:5};
           }
