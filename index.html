@@ -470,6 +470,7 @@ body { font-family: 'Montserrat', sans-serif; }
 <script>
 const VILLA_LAT=21.807531;
 const VILLA_LNG=-102.776848;
+const VILLA_PLACE_ID='ChIJxcZsYwDLKYQRdnCwt1SmRRg';
  let map,directionsService,directionsRenderer,autocomplete;
 function initMap(){
  map=new google.maps.Map(document.getElementById("map-canvas"),{center:{lat:VILLA_LAT,lng:VILLA_LNG},zoom:13});
@@ -482,7 +483,7 @@ function initMap(){
 function calcularRuta(){
  const origin=document.getElementById("origin-input").value;
  if(!origin)return;
- directionsService.route({origin:origin,destination:{lat:VILLA_LAT,lng:VILLA_LNG},travelMode:google.maps.TravelMode.DRIVING},(res,status)=>{if(status==="OK"){directionsRenderer.setDirections(res);}else{alert("No se pudo obtener la ruta: "+status);}});
+ directionsService.route({origin:origin,destination:{placeId:VILLA_PLACE_ID},travelMode:google.maps.TravelMode.DRIVING},(res,status)=>{if(status==="OK"){directionsRenderer.setDirections(res);}else{alert("No se pudo obtener la ruta: "+status);}});
 }
 document.getElementById("obtener-direcciones").addEventListener("click",e=>{e.preventDefault();calcularRuta();});
 </script>
