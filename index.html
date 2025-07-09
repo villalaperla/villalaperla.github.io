@@ -365,11 +365,14 @@ body { font-family: 'Montserrat', sans-serif; }
   </div>
 </section>
 <section data-aos="fade-up" id="como-llegar" class="py-12 bg-gray-100">
-  <div class="max-w-5xl mx-auto px-4 text-center">
+  <div class="max-w-5xl mx-auto px-4 text-center space-y-4">
     <h2 class="text-center text-3xl logo-font mb-4">¿Cómo llegar?</h2>
-    <div class="map-container mx-auto">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4394.026996501516!2d-102.7768482241435!3d21.807530560574886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8429cb00636cc6c5%3A0x1845a654b7b07076!2sVilla%20la%20Perla!5e1!3m2!1ses-419!2smx!4v1751994245633!5m2!1ses-419!2smx" width="100%" height="100%" style="border:0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <div class="flex justify-center space-x-2">
+      <input id="origin-input" type="text" placeholder="Ingresa tu punto de partida" class="border rounded p-2 w-full max-w-xs" />
+      <button id="obtener-direcciones" class="btn-flashy bg-amber-500 text-white px-4 py-2 rounded">Obtener direcciones</button>
     </div>
+    <div id="map-canvas" class="map-container mx-auto"></div>
+    <div id="directions-panel" class="text-left mt-4 space-y-2"></div>
   </div>
 </section>
 <a href="#top" class="btn-flashy fixed bottom-30 right-4 bg-amber-500 text-white p-4 rounded-full shadow-lg flex items-center justify-center" aria-label="Regresar arriba">
@@ -464,5 +467,25 @@ body { font-family: 'Montserrat', sans-serif; }
       }
     }
 </script>
+<script>
+const VILLA_LAT=21.807531;
+const VILLA_LNG=-102.776848;
+let map,directionsService,directionsRenderer,autocomplete;
+function initMap(){
+ map=new google.maps.Map(document.getElementById("map-canvas"),{center:{lat:VILLA_LAT,lng:VILLA_LNG},zoom:13});
+ directionsService=new google.maps.DirectionsService();
+ directionsRenderer=new google.maps.DirectionsRenderer();
+ directionsRenderer.setMap(map);
+ directionsRenderer.setPanel(document.getElementById("directions-panel"));
+ autocomplete=new google.maps.places.Autocomplete(document.getElementById("origin-input"));
+}
+function calcularRuta(){
+ const origin=document.getElementById("origin-input").value;
+ if(!origin)return;
+ directionsService.route({origin:origin,destination:{lat:VILLA_LAT,lng:VILLA_LNG},travelMode:google.maps.TravelMode.DRIVING},(res,status)=>{if(status==="OK"){directionsRenderer.setDirections(res);}else{alert("No se pudo obtener la ruta: "+status);}});
+}
+document.getElementById("obtener-direcciones").addEventListener("click",e=>{e.preventDefault();calcularRuta();});
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&libraries=places&callback=initMap"></script>
 </body>
 </html>
