@@ -367,15 +367,16 @@ body { font-family: 'Montserrat', sans-serif; }
 <section data-aos="fade-up" id="como-llegar" class="py-12 bg-gray-100">
   <div class="max-w-5xl mx-auto px-4 text-center space-y-4">
     <h2 class="text-center text-3xl logo-font mb-4">¿Cómo llegar?</h2>
+    <p class="text-center mb-4">Utiliza la aplicación Google Maps para obtener la ruta.</p>
+    <a href="https://maps.app.goo.gl/yNJiRgzKyytseDHg9" target="_blank" rel="noopener" class="btn-flashy mx-auto flex items-center justify-center bg-white border border-gray-300 px-4 py-2 rounded shadow space-x-2">
+      <img src="google-maps.svg" alt="Google Maps" class="w-6 h-6">
+      <span>Abrir en Google Maps</span>
+    </a>
     <p class="text-center mb-4">Escribe la dirección de tu punto de partida<br>por ejemplo:<br> "Av. Constitución 123, Centro, Calvillo, Ags.".</p>
     <div class="flex justify-center space-x-2">
       <input id="origin-input" type="text" placeholder="Ingresa tu punto de partida" class="border rounded p-2 w-full max-w-xs" />
       <button id="obtener-direcciones" class="btn-flashy bg-amber-500 text-white px-4 py-2 rounded">Obtener direcciones</button>
     </div>
-    <a href="https://maps.app.goo.gl/yNJiRgzKyytseDHg9" target="_blank" rel="noopener" class="btn-flashy mx-auto flex items-center justify-center bg-white border border-gray-300 px-4 py-2 rounded shadow space-x-2">
-      <img src="google-maps.svg" alt="Google Maps" class="w-6 h-6">
-      <span>Abrir en Google Maps</span>
-    </a>
     <div id="map-canvas" class="map-container mx-auto"></div>
     <div id="directions-panel" class="text-left mt-4 space-y-2"></div>
   </div>
