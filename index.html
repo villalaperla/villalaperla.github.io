@@ -66,6 +66,7 @@ body { font-family: 'Montserrat', sans-serif; }
     <li><a href="#testimonios" class="flex items-center px-2 py-1 rounded hover:bg-amber-200"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mr-2"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L15.586 11H3a1 1 0 110-2h12.586l-5.293-5.293a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>Comentarios</a></li>
     <li><a href="#reserva" class="flex items-center px-2 py-1 rounded hover:bg-amber-200"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mr-2"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L15.586 11H3a1 1 0 110-2h12.586l-5.293-5.293a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>Reserva</a></li>
     <li><a href="#contacto" class="flex items-center px-2 py-1 rounded hover:bg-amber-200"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mr-2"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L15.586 11H3a1 1 0 110-2h12.586l-5.293-5.293a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>Contacto</a></li>
+    <li><a href="#clima" class="flex items-center px-2 py-1 rounded hover:bg-amber-200"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mr-2"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L15.586 11H3a1 1 0 110-2h12.586l-5.293-5.293a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>Pronóstico</a></li>
     <li><a href="#como-llegar" class="flex items-center px-2 py-1 rounded hover:bg-amber-200"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mr-2"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L15.586 11H3a1 1 0 110-2h12.586l-5.293-5.293a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>¿Cómo llegar?</a></li>
   </ul>
 </nav>
@@ -364,6 +365,14 @@ body { font-family: 'Montserrat', sans-serif; }
   </form>
   </div>
 </section>
+<section data-aos="fade-up" id="clima" class="py-12 bg-white">
+  <div class="max-w-5xl mx-auto px-4">
+    <h2 class="text-center text-3xl logo-font mb-4">Pronóstico del clima</h2>
+    <div id="weather" class="text-center space-y-4">
+      <p>Cargando clima...</p>
+    </div>
+  </div>
+</section>
 <section data-aos="fade-up" id="como-llegar" class="py-12 bg-gray-100">
   <div class="max-w-5xl mx-auto px-4 text-center space-y-4">
     <h2 class="text-center text-3xl logo-font mb-4">¿Cómo llegar?</h2>
@@ -492,6 +501,32 @@ function calcularRuta(){
  directionsService.route({origin:origin,destination:{placeId:VILLA_PLACE_ID},travelMode:google.maps.TravelMode.DRIVING},(res,status)=>{if(status==="OK"){directionsRenderer.setDirections(res);}else{alert("No se pudo obtener la ruta: "+status);}});
 }
 document.getElementById("obtener-direcciones").addEventListener("click",e=>{e.preventDefault();calcularRuta();});
+</script>
+<script>
+async function cargarClima(){
+  try{
+    const res=await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${VILLA_LAT}&longitude=${VILLA_LNG}&current_weather=true&daily=temperature_2m_max,temperature_2m_min,weathercode&timezone=auto`);
+    const data=await res.json();
+    const weather=document.getElementById('weather');
+    if(!data.current_weather){weather.textContent='No se pudo cargar el clima';return;}
+    const desc=codigoClima(data.current_weather.weathercode);
+    let html=`<p class="text-2xl font-semibold">${data.current_weather.temperature}°C - ${desc}</p>`;
+    html+='<div class="grid grid-cols-2 sm:grid-cols-3 gap-4 mt-4">';
+    for(let i=0;i<data.daily.time.length;i++){
+      const date=new Date(data.daily.time[i]);
+      html+=`<div><p class="font-semibold">${date.toLocaleDateString()}</p><p>Max: ${data.daily.temperature_2m_max[i]}°C</p><p>Min: ${data.daily.temperature_2m_min[i]}°C</p></div>`;
+    }
+    html+='</div>';
+    weather.innerHTML=html;
+  }catch(e){
+    document.getElementById('weather').textContent='Error al cargar clima';
+  }
+}
+function codigoClima(c){
+  const m={0:'Despejado',1:'Mayormente despejado',2:'Parcialmente nublado',3:'Nublado',45:'Neblina',48:'Niebla escarchada',51:'Llovizna ligera',53:'Llovizna moderada',55:'Llovizna intensa',61:'Lluvia ligera',63:'Lluvia moderada',65:'Lluvia intensa',80:'Chubascos',95:'Tormenta',96:'Tormenta con granizo'};
+  return m[c]||'';
+}
+document.addEventListener('DOMContentLoaded',cargarClima);
 </script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDGPhkcGn5alswcJ9ClJ__pXe9WfFE0K3c&libraries=places&callback=initMap&loading=async"></script>
 </body>
