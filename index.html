@@ -470,14 +470,14 @@ body { font-family: 'Montserrat', sans-serif; }
 <script>
 const VILLA_LAT=21.807531;
 const VILLA_LNG=-102.776848;
-let map,directionsService,directionsRenderer,autocomplete;
+ let map,directionsService,directionsRenderer,autocomplete;
 function initMap(){
  map=new google.maps.Map(document.getElementById("map-canvas"),{center:{lat:VILLA_LAT,lng:VILLA_LNG},zoom:13});
  directionsService=new google.maps.DirectionsService();
  directionsRenderer=new google.maps.DirectionsRenderer();
  directionsRenderer.setMap(map);
  directionsRenderer.setPanel(document.getElementById("directions-panel"));
- autocomplete=new google.maps.places.Autocomplete(document.getElementById("origin-input"));
+ autocomplete=new google.maps.places.PlaceAutocompleteElement({inputElement:document.getElementById("origin-input")});
 }
 function calcularRuta(){
  const origin=document.getElementById("origin-input").value;
@@ -486,6 +486,6 @@ function calcularRuta(){
 }
 document.getElementById("obtener-direcciones").addEventListener("click",e=>{e.preventDefault();calcularRuta();});
 </script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&libraries=places&callback=initMap"></script>
+<script async defer loading="async" src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&libraries=places&callback=initMap"></script>
 </body>
 </html>
