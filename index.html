@@ -397,6 +397,7 @@ body { font-family: 'Montserrat', sans-serif; }
       return {
         testimonials: [],
         nuevo: {nombre: '', mensaje: '', calificacion: 5},
+        firestoreEnabled: true,
         async init(){
           try {
             const snapshot = await db.collection('testimonials').get();
@@ -412,14 +413,18 @@ body { font-family: 'Montserrat', sans-serif; }
             console.error('Failed to load testimonials', e);
             const res = await fetch('testimonials.json');
             this.testimonials = await res.json();
+            this.firestoreEnabled = false;
           }
         },
         async addTestimonial(){
           if(this.nuevo.nombre && this.nuevo.mensaje && this.nuevo.calificacion){
-            try {
-              await db.collection('testimonials').add({...this.nuevo});
-            } catch(e) {
-              console.error('Failed to save testimonial', e);
+            if(this.firestoreEnabled){
+              try {
+                await db.collection('testimonials').add({...this.nuevo});
+              } catch(e) {
+                console.error('Failed to save testimonial', e);
+                this.firestoreEnabled = false;
+              }
             }
             this.testimonials.push({...this.nuevo});
             this.nuevo = {nombre:'',mensaje:'',calificacion:5};
