@@ -401,18 +401,10 @@ body { font-family: 'Montserrat', sans-serif; }
         async init(){
           try {
             const snapshot = await db.collection('testimonials').get();
-            if(snapshot.empty){
-              const res = await fetch('testimonials.json');
-              const defaults = await res.json();
-              this.testimonials = defaults;
-              defaults.forEach(t => db.collection('testimonials').add(t));
-            } else {
-              this.testimonials = snapshot.docs.map(doc => doc.data());
-            }
+            this.testimonials = snapshot.docs.map(doc => doc.data());
           } catch(e) {
             console.error('Failed to load testimonials', e);
-            const res = await fetch('testimonials.json');
-            this.testimonials = await res.json();
+            this.testimonials = [];
             this.firestoreEnabled = false;
           }
         },
