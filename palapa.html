@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Palapa La Perla</title>
+<meta name="description" content="Ven a disfrutar de nuestra increíble alberca en Palapa La Perla y todas sus amenidades en Aguascalientes">
+<meta name="keywords" content="palapa, alberca, renta, Aguascalientes, eventos">
+<link rel="canonical" href="https://villalaperla.github.io/palapa.html">
+<meta property="og:title" content="Palapa La Perla - Alberca y terraza">
+<meta property="og:description" content="Ven a disfrutar de nuestra alberca y terraza en Palapa La Perla">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://villalaperla.github.io/palapa.html">
+<meta property="og:image" content="https://villalaperla.github.io/FondoPortada.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<style>
+body { font-family: 'Montserrat', sans-serif; }
+.logo-font { font-family: 'Dancing Script', cursive; }
+.gallery-swiper .swiper-slide { width: 250px; height: 250px; }
+/* Estilos para la imagen ampliada del carrusel */
+.gslide-image { border-radius: 0.75rem; box-shadow: 0 10px 25px rgba(0,0,0,0.6); }
+/* Contenedor con efecto de cristal */
+.glass {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 1rem;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.5);
+}
+/* Contenedor para el mapa */
+.map-container {
+  width: 100%;
+  max-width: 400px;
+  height: 400px;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.7);
+
+.btn-flashy{position:relative;overflow:hidden;transition:transform 0.3s,box-shadow 0.3s;}
+.btn-flashy::after{content:"";position:absolute;top:0;left:-100%;width:100%;height:100%;background:rgba(255,255,255,0.3);transform:skewX(-45deg);transition:left 0.5s;}
+.btn-flashy:hover{transform:scale(1.05);box-shadow:0 10px 15px rgba(0,0,0,0.3);}
+.btn-flashy:hover::after{left:200%;}
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LodgingBusiness",
+  "name": "Palapa La Perla",
+  "description": "Ven a disfrutar de nuestra increíble alberca en Palapa La Perla, Aguascalientes.",
+  "image": "https://villalaperla.github.io/FondoPortada.jpg",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Calle San Marcos s/n fracc San Ignacio II y III",
+    "addressLocality": "Aguascalientes",
+    "addressRegion": "Aguascalientes",
+    "addressCountry": "MX"
+  },
+  "url": "https://villalaperla.github.io/palapa.html"
+
+}
+</script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+<div id="top"></div>
+<h1 class="sr-only">Palapa La Perla - Alberca privada en Aguascalientes</h1>
+<button id="open-menu" class="btn-flashy fixed top-4 left-4 z-50 bg-amber-500 text-white p-2 rounded">
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+  </svg>
+</button>
+<nav id="main-nav" class="fixed top-0 left-0 w-56 h-full bg-[#f5f5dc] shadow transform transition-transform -translate-x-full z-40">
+  <button id="close-menu" class="btn-flashy absolute top-4 right-4 text-xl">&times;</button>
+  <ul class="mt-16 space-y-4 p-4">
+    <li><a href="#sobre" class="flex items-center px-2 py-1 rounded hover:bg-amber-200"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mr-2"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L15.586 11H3a1 1 0 110-2h12.586l-5.293-5.293a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>Sobre la Palapa</a></li>
+    <li><a href="#instalaciones" class="flex items-center px-2 py-1 rounded hover:bg-amber-200"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mr-2"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L15.586 11H3a1 1 0 110-2h12.586l-5.293-5.293a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>Instalaciones</a></li>
+    <li><a href="#galeria" class="flex items-center px-2 py-1 rounded hover:bg-amber-200"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mr-2"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L15.586 11H3a1 1 0 110-2h12.586l-5.293-5.293a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>Galería</a></li>
+    <li><a href="#caracteristicas" class="flex items-center px-2 py-1 rounded hover:bg-amber-200"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mr-2"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L15.586 11H3a1 1 0 110-2h12.586l-5.293-5.293a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>Amenidades</a></li>
+    <li><a href="#calendario" class="flex items-center px-2 py-1 rounded hover:bg-amber-200"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mr-2"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L15.586 11H3a1 1 0 110-2h12.586l-5.293-5.293a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>Disponibilidad</a></li>
+    <li><a href="#testimonios" class="flex items-center px-2 py-1 rounded hover:bg-amber-200"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mr-2"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L15.586 11H3a1 1 0 110-2h12.586l-5.293-5.293a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>Comentarios</a></li>
+    <li><a href="#reserva" class="flex items-center px-2 py-1 rounded hover:bg-amber-200"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mr-2"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L15.586 11H3a1 1 0 110-2h12.586l-5.293-5.293a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>Reserva</a></li>
+    <li><a href="#contacto" class="flex items-center px-2 py-1 rounded hover:bg-amber-200"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mr-2"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L15.586 11H3a1 1 0 110-2h12.586l-5.293-5.293a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>Contacto</a></li>
+    <li><a href="#clima" class="flex items-center px-2 py-1 rounded hover:bg-amber-200"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mr-2"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L15.586 11H3a1 1 0 110-2h12.586l-5.293-5.293a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>Pronóstico</a></li>
+    <li><a href="#como-llegar" class="flex items-center px-2 py-1 rounded hover:bg-amber-200"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mr-2"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L15.586 11H3a1 1 0 110-2h12.586l-5.293-5.293a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>¿Cómo llegar?</a></li>
+  </ul>
+</nav>
+<section data-aos="fade-up" class="relative min-h-screen">
+  <img src="FondoPortada.jpg" class="absolute inset-0 w-full h-full object-cover" alt="Palapa">
+  <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+    <div class="glass text-center text-white px-8 py-6">
+      <p class="text-2xl sm:text-3xl font-semibold">Bienvenidos a</p>
+      <img src="logo.png" alt="Palapa La Perla" class="mx-auto h-32 sm:h-48 mt-2" />
+      <p class="mt-4 text-lg">Diversión y descanso en Aguascalientes</p>
+      <a href="#contacto" class="btn-flashy mt-6 inline-block bg-amber-500 hover:bg-amber-600 text-white px-6 py-3 rounded-full">Consulta disponibilidad</a>
+    </div>
+  </div>
+</section>
+<section data-aos="fade-up" id="sobre" class="py-12">
+  <div class="max-w-5xl mx-auto px-4 text-center">
+    <h2 class="text-3xl logo-font mb-4">Sobre la Palapa</h2>
+    <div class="space-y-2" style="text-align: justify;">
+      <p>Ven a disfrutar de nuestra increíble alberca en "Palapa La Perla" y goza de todas las amenidades, el espacio y la privacidad con tu familia y amigos.</p>
+  </div>
+</section>
+<section data-aos="fade-up" id="instalaciones" class="py-12 bg-gray-100">
+  <div class="max-w-5xl mx-auto px-4">
+    <h2 class="text-center text-3xl logo-font mb-4">Nuestras instalaciones</h2>
+  </div>
+      <div class="space-y-4" x-data="{open:null}">
+        <div class="border rounded-lg shadow-lg" :class="{'bg-white':open===1}">
+          <button class="btn-flashy w-full flex justify-between items-center p-4" @click="open===1?open=null:open=1">
+            <span class="flex items-center"><svg class="w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2a9.99 9.99 0 00-3 19.49v-4.77c-.61-.3-1-.9-1-1.59V13a1 1 0 01.54-.89l2.94-1.47a1 1 0 01.92 0l2.94 1.47A1 1 0 0116 13v2.13c0 .69-.39 1.29-1 1.59v4.77A10 10 0 0012 2z"/></svg>Alberca climatizada</span>
+            <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
+          </button>
+          <div x-show="open===1" class="p-4 pt-0 space-y-2 text-justify">
+            <p>Disfruta de nuestra alberca climatizada durante todo el a&ntilde;o, perfecta para relajarte o divertirte.</p>
+          </div>
+        </div>
+        <div class="border rounded-lg shadow-lg" :class="{'bg-white':open===2}">
+          <button class="btn-flashy w-full flex justify-between items-center p-4" @click="open===2?open=null:open=2">
+            <span class="flex items-center"><svg class="w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M3 12a9 9 0 0118 0v7.5a2.25 2.25 0 01-2.25 2.25h-1.5a.75.75 0 01-.75-.75V12a4.5 4.5 0 10-9 0v9a.75.75 0 01-.75.75h-1.5A2.25 2.25 0 013 19.5V12z"/></svg>Zona de terraza con asador</span>
+            <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
+          </button>
+          <div x-show="open===2" class="p-4 pt-0 space-y-2 text-justify">
+            <p>Prepara deliciosas carnes asadas y comparte con tus invitados en la amplia terraza.</p>
+          </div>
+        </div>
+        <div class="border rounded-lg shadow-lg" :class="{'bg-white':open===3}">
+          <button class="btn-flashy w-full flex justify-between items-center p-4" @click="open===3?open=null:open=3">
+            <span class="flex items-center"><svg class="w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M5.25 2.25a.75.75 0 000 1.5H7.5A2.25 2.25 0 019.75 6v9.75a.75.75 0 01-.75.75H8.25A1.5 1.5 0 006.75 18v4.5h10.5V18a1.5 1.5 0 00-1.5-1.5h-.75a.75.75 0 01-.75-.75V6A2.25 2.25 0 0117.25 3h2.25a.75.75 0 000-1.5h-14.25z"/></svg>Zona de camastros</span>
+            <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
+          </button>
+          <div x-show="open===3" class="p-4 pt-0 space-y-2 text-justify">
+            <p>Rel&aacute;jate al sol en nuestros c&oacute;modos camastros junto a la alberca.</p>
+          </div>
+        </div>
+        <div class="border rounded-lg shadow-lg" :class="{'bg-white':open===4}">
+          <button class="btn-flashy w-full flex justify-between items-center p-4" @click="open===4?open=null:open=4">
+            <span class="flex items-center"><svg class="w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M2.25 6A2.25 2.25 0 014.5 3.75h15A2.25 2.25 0 0121.75 6v12A2.25 2.25 0 0119.5 20.25h-15A2.25 2.25 0 012.25 18V6z"/></svg>Refrigerador y microondas</span>
+            <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
+          </button>
+          <div x-show="open===4" class="p-4 pt-0 space-y-2 text-justify">
+            <p>Cuentas con refrigerador y microondas para mantener tus alimentos y bebidas fr&iacute;os o calientes.</p>
+          </div>
+        </div>
+        <div class="border rounded-lg shadow-lg" :class="{'bg-white':open===5}">
+          <button class="btn-flashy w-full flex justify-between items-center p-4" @click="open===5?open=null:open=5">
+            <span class="flex items-center"><svg class="w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M2.25 6A2.25 2.25 0 014.5 3.75h15A2.25 2.25 0 0121.75 6v12A2.25 2.25 0 0119.5 20.25h-15A2.25 2.25 0 012.25 18V6z"/></svg>TV y Wi-fi</span>
+            <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
+          </button>
+          <div x-show="open===5" class="p-4 pt-0 space-y-2 text-justify">
+            <p>Disfruta de entretenimiento y con&eacute;ctate cuando lo necesites con nuestro servicio de internet.</p>
+          </div>
+        </div>
+        <div class="border rounded-lg shadow-lg" :class="{'bg-white':open===6}">
+          <button class="btn-flashy w-full flex justify-between items-center p-4" @click="open===6?open=null:open=6">
+            <span class="flex items-center"><svg class="w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M3 13.5A4.5 4.5 0 017.5 9h9A4.5 4.5 0 0121 13.5v4.125c0 .414-.336.75-.75.75h-3.375a.375.375 0 01-.375-.375V18a2.25 2.25 0 00-4.5 0v.75a.375.375 0 01-.375.375H7.5a.75.75 0 01-.75-.75V13.5z"/></svg>Estacionamiento privado</span>
+            <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
+          </button>
+          <div x-show="open===6" class="p-4 pt-0 space-y-2 text-justify">
+            <p>Cuentas con estacionamiento privado para la seguridad y comodidad de todos tus invitados.</p>
+          </div>
+        </div>
+        <div class="border rounded-lg shadow-lg" :class="{'bg-white':open===7}">
+          <button class="btn-flashy w-full flex justify-between items-center p-4" @click="open===7?open=null:open=7">
+            <span class="flex items-center"><svg class="w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M10.5 3.75a.75.75 0 011.5 0v5.364l3.385-3.384a.75.75 0 111.06 1.06L12 11.25l-4.445-4.46a.75.75 0 111.06-1.06L10.5 9.114V3.75z"/><path d="M2.25 15a5.25 5.25 0 015.25-5.25h9a5.25 5.25 0 015.25 5.25V20.5a.75.75 0 01-.75.75h-18a.75.75 0 01-.75-.75V15z"/></svg>Espacios ideales para relajarse</span>
+            <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
+          </button>
+          <div x-show="open===7" class="p-4 pt-0 space-y-2 text-justify">
+            <p>Encuentra rincones tranquilos para descansar, meditar o simplemente disfrutar con tus seres queridos.</p>
+          </div>
+        </div>
+      </div>
+</section>
+<section data-aos="fade-up" id="galeria" class="bg-white py-12">
+  <div class="max-w-5xl mx-auto px-4">
+    <h2 class="text-center text-3xl logo-font mb-8">Galería</h2>
+    <div class="swiper gallery-swiper">
+    <div class="swiper-wrapper">
+    <div class="swiper-slide"><a href="Galeria/1.-Comedor.jpg" class="glightbox"><img src="Galeria/1.-Comedor.jpg" class="w-full h-full object-cover rounded-lg" alt="Comedor amplio de la villa"></a></div>
+    <div class="swiper-slide"><a href="Galeria/2.-Recamara1.jpg" class="glightbox"><img src="Galeria/2.-Recamara1.jpg" class="w-full h-full object-cover rounded-lg" alt="Primera recámara"></a></div>
+    <div class="swiper-slide"><a href="Galeria/3.-Recamara2.jpg" class="glightbox"><img src="Galeria/3.-Recamara2.jpg" class="w-full h-full object-cover rounded-lg" alt="Segunda recámara"></a></div>
+    <div class="swiper-slide"><a href="Galeria/4.-Recamara3.jpg" class="glightbox"><img src="Galeria/4.-Recamara3.jpg" class="w-full h-full object-cover rounded-lg" alt="Tercera recámara"></a></div>
+    <div class="swiper-slide"><a href="Galeria/5.-Jacuzzi.jpg" class="glightbox"><img src="Galeria/5.-Jacuzzi.jpg" class="w-full h-full object-cover rounded-lg" alt="Jacuzzi privado"></a></div>
+    <div class="swiper-slide"><a href="Galeria/6.-Bano.jpg" class="glightbox"><img src="Galeria/6.-Bano.jpg" class="w-full h-full object-cover rounded-lg" alt="Baño de la villa"></a></div>
+    <div class="swiper-slide"><a href="Galeria/7.-Bano.jpg" class="glightbox"><img src="Galeria/7.-Bano.jpg" class="w-full h-full object-cover rounded-lg" alt="Ducha moderna"></a></div>
+    <div class="swiper-slide"><a href="Galeria/8.-Terraza1.jpg" class="glightbox"><img src="Galeria/8.-Terraza1.jpg" class="w-full h-full object-cover rounded-lg" alt="Terraza con vista"></a></div>
+    <div class="swiper-slide"><a href="Galeria/9.-Terraza2.jpg" class="glightbox"><img src="Galeria/9.-Terraza2.jpg" class="w-full h-full object-cover rounded-lg" alt="Otra vista de la terraza"></a></div>
+    <div class="swiper-slide"><a href="Galeria/10.-Exterior.jpg" class="glightbox"><img src="Galeria/10.-Exterior.jpg" class="w-full h-full object-cover rounded-lg" alt="Fachada de la villa"></a></div>
+    <div class="swiper-slide"><a href="Galeria/11.-Exterior.jpg" class="glightbox"><img src="Galeria/11.-Exterior.jpg" class="w-full h-full object-cover rounded-lg" alt="Vista lateral de la villa"></a></div>
+    <div class="swiper-slide"><a href="Galeria/12.-Exterior.jpg" class="glightbox"><img src="Galeria/12.-Exterior.jpg" class="w-full h-full object-cover rounded-lg" alt="Área exterior adicional"></a></div>
+    <div class="swiper-slide"><a href="Galeria/13.-Alberca.jpg" class="glightbox"><img src="Galeria/13.-Alberca.jpg" class="w-full h-full object-cover rounded-lg" alt="Alberca al aire libre"></a></div>
+    <div class="swiper-slide"><a href="Galeria/14.-Alberca.jpg" class="glightbox"><img src="Galeria/14.-Alberca.jpg" class="w-full h-full object-cover rounded-lg" alt="Área de alberca con jardín"></a></div>
+    <div class="swiper-slide"><a href="Galeria/15.-AlbercaNoche.jpg" class="glightbox"><img src="Galeria/15.-AlbercaNoche.jpg" class="w-full h-full object-cover rounded-lg" alt="Alberca iluminada de noche"></a></div>
+    <div class="swiper-slide"><a href="Galeria/16.-AlbercaNoche.jpg" class="glightbox"><img src="Galeria/16.-AlbercaNoche.jpg" class="w-full h-full object-cover rounded-lg" alt="Vista nocturna de la alberca"></a></div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+  </div>
+</section>
+<section data-aos="fade-up" id="caracteristicas" class="py-12 bg-gray-100">
+  <div class="max-w-5xl mx-auto px-4">
+    <h2 class="text-center text-3xl logo-font mb-4">Amenidades</h2>
+    <ul class="list-disc list-inside space-y-1 text-left ml-8">
+    <li>Alberca climatizada.</li>
+    <li>Zona de terraza con asador.</li>
+    <li>Zona de camastros.</li>
+    <li>Refrigerador y microondas.</li>
+    <li>TV y Wi-fi.</li>
+    <li>Estacionamiento privado.</li>
+    <li>Espacios ideales para relajarse.</li>
+    </ul>
+    <p class="mt-4 font-semibold text-red-600">Queda estrictamente prohibido el ingreso de mascotas.</p>
+    <p class="font-semibold text-red-600">No se hacen apartados sin anticipo.</p>
+  </div>
+</section>
+<section data-aos="fade-up" id="calendario" class="py-12 bg-gray-100">
+  <div class="max-w-5xl mx-auto px-4">
+    <h2 class="text-center text-3xl logo-font mb-4">Disponibilidad</h2>
+      <p class="text-justify mb-4">
+        Nuestra anfitriona Alicia está lista para ayudarte a planear una visita inolvidable. Con gusto te orientará para elegir la fecha ideal según tus planes, resolverá tus dudas y te dará atención personalizada desde el primer mensaje.
+      </p>
+      <p class="text-justify mb-4 font-semibold">Capacidad para 20 personas.</p>
+      <p class="text-justify mb-4 font-semibold">Check in 11:00am - Check out 9:00pm.</p>
+      <p class="text-justify mb-4">
+        Consulta la disponibilidad enviándole un WhatsApp directo y sin compromiso.
+      </p>
+      <p class="text-justify mb-6">
+        Para tu tranquilidad, puedes realizar tu reservación de forma segura y sencilla a través de <a href="#reserva" class="inline-block align-middle"><img src="https://upload.wikimedia.org/wikipedia/commons/6/69/Airbnb_Logo_B%C3%A9lo.svg" alt="Airbnb" class="w-20 inline"></a>, garantizando confianza y protección en todo el proceso.
+      </p>
+      <div class="text-center">
+        <a href="https://wa.me/5214491108028?text=Hola%20Alicia,%20me%20puedes%20dar%20informaci%C3%B3n%20sobre%20la%20Palapa%20La%20Perla" target="_blank" class="btn-flashy inline-flex items-center bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full font-semibold">
+          <img src="WhatsApp.svg" alt="WhatsApp" class="w-5 h-5 mr-2">Contactar por WhatsApp
+        </a>
+      </div>
+  </div>
+</section>
+<section data-aos="fade-up" id="faq" class="py-12">
+  <div class="max-w-5xl mx-auto px-4">
+    <h2 class="text-center text-3xl logo-font mb-4">Preguntas frecuentes</h2>
+    <div class="max-w-xl mx-auto space-y-4" x-data="{open:null}">
+      <div class="border rounded-lg shadow-lg" :class="{'bg-white':open===1}">
+        <button class="btn-flashy w-full flex justify-between items-center p-4" @click="open===1?open=null:open=1">
+          <span class="flex items-center"><svg class="w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zM8.94 6.94a.75.75 0 11-1.061-1.061 3 3 0 112.871 5.026v.345a.75.75 0 01-1.5 0v-.5c0-.72.57-1.172 1.081-1.287A1.5 1.5 0 108.94 6.94zM10 15a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/></svg>¿Se requiere un anticipo para reservar?</span>
+          <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
+        </button>
+        <div x-show="open===1" class="p-4 pt-0 space-y-2 text-justify">
+          <p>Sí, solicitamos un anticipo para garantizar tu fecha. Alicia te explicará el proceso paso a paso vía WhatsApp.</p>
+        </div>
+      </div>
+      <div class="border rounded-lg shadow-lg" :class="{'bg-white':open===2}">
+        <button class="btn-flashy w-full flex justify-between items-center p-4" @click="open===2?open=null:open=2">
+          <span class="flex items-center"><svg class="w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zM8.94 6.94a.75.75 0 11-1.061-1.061 3 3 0 112.871 5.026v.345a.75.75 0 01-1.5 0v-.5c0-.72.57-1.172 1.081-1.287A1.5 1.5 0 108.94 6.94zM10 15a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/></svg>¿Cuántas personas pueden hospedarse cómodamente?</span>
+          <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
+        </button>
+        <div x-show="open===2" class="p-4 pt-0 space-y-2 text-justify">
+          <p>La villa tiene capacidad total para hasta 14 personas, distribuidas en tres habitaciones amplias.</p>
+        </div>
+      </div>
+      <div class="border rounded-lg shadow-lg" :class="{'bg-white':open===3}">
+        <button class="btn-flashy w-full flex justify-between items-center p-4" @click="open===3?open=null:open=3">
+          <span class="flex items-center"><svg class="w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zM8.94 6.94a.75.75 0 11-1.061-1.061 3 3 0 112.871 5.026v.345a.75.75 0 01-1.5 0v-.5c0-.72.57-1.172 1.081-1.287A1.5 1.5 0 108.94 6.94zM10 15a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/></svg>¿Hay señal de celular e internet?</span>
+          <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
+        </button>
+        <div x-show="open===3" class="p-4 pt-0 space-y-2 text-justify">
+          <p>Sí, contamos con Wi-Fi gratuito y buena señal de celular en la zona.</p>
+        </div>
+      </div>
+      <div class="border rounded-lg shadow-lg" :class="{'bg-white':open===4}">
+        <button class="btn-flashy w-full flex justify-between items-center p-4" @click="open===4?open=null:open=4">
+          <span class="flex items-center"><svg class="w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zM8.94 6.94a.75.75 0 11-1.061-1.061 3 3 0 112.871 5.026v.345a.75.75 0 01-1.5 0v-.5c0-.72.57-1.172 1.081-1.287A1.5 1.5 0 108.94 6.94zM10 15a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/></svg>¿Se puede cocinar en la villa?</span>
+          <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
+        </button>
+        <div x-show="open===4" class="p-4 pt-0 space-y-2 text-justify">
+          <p>¡Claro! La cocina está totalmente equipada con utensilios, estufa, refrigerador y microondas.</p>
+        </div>
+      </div>
+      <div class="border rounded-lg shadow-lg" :class="{'bg-white':open===5}">
+        <button class="btn-flashy w-full flex justify-between items-center p-4" @click="open===5?open=null:open=5">
+          <span class="flex items-center"><svg class="w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zM8.94 6.94a.75.75 0 11-1.061-1.061 3 3 0 112.871 5.026v.345a.75.75 0 01-1.5 0v-.5c0-.72.57-1.172 1.081-1.287A1.5 1.5 0 108.94 6.94zM10 15a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/></svg>¿Qué debo llevar para mi estancia?</span>
+          <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
+        </button>
+        <div x-show="open===5" class="p-4 pt-0 space-y-2 text-justify">
+          <p>Solo tus artículos personales, comida y bebidas favoritas. Todo lo demás está listo para que disfrutes.</p>
+        </div>
+      </div>
+      <div class="border rounded-lg shadow-lg" :class="{'bg-white':open===6}">
+        <button class="btn-flashy w-full flex justify-between items-center p-4" @click="open===6?open=null:open=6">
+          <span class="flex items-center"><svg class="w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zM8.94 6.94a.75.75 0 11-1.061-1.061 3 3 0 112.871 5.026v.345a.75.75 0 01-1.5 0v-.5c0-.72.57-1.172 1.081-1.287A1.5 1.5 0 108.94 6.94zM10 15a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/></svg>¿La alberca está disponible todo el año?</span>
+          <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
+        </button>
+        <div x-show="open===6" class="p-4 pt-0 space-y-2 text-justify">
+          <p>Sí, es climatizada y puede usarse en cualquier temporada.</p>
+        </div>
+      </div>
+      <div class="border rounded-lg shadow-lg" :class="{'bg-white':open===7}">
+        <button class="btn-flashy w-full flex justify-between items-center p-4" @click="open===7?open=null:open=7">
+          <span class="flex items-center"><svg class="w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zM8.94 6.94a.75.75 0 11-1.061-1.061 3 3 0 112.871 5.026v.345a.75.75 0 01-1.5 0v-.5c0-.72.57-1.172 1.081-1.287A1.5 1.5 0 108.94 6.94zM10 15a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/></svg>¿La zona es segura?</span>
+          <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
+        </button>
+        <div x-show="open===7" class="p-4 pt-0 space-y-2 text-justify">
+          <p>Sí, es una zona tranquila dentro de una reserva ecológica, con acceso controlado y privacidad total.</p>
+        </div>
+      </div>
+      <div class="border rounded-lg shadow-lg" :class="{'bg-white':open===8}">
+        <button class="btn-flashy w-full flex justify-between items-center p-4" @click="open===8?open=null:open=8">
+          <span class="flex items-center"><svg class="w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zM8.94 6.94a.75.75 0 11-1.061-1.061 3 3 0 112.871 5.026v.345a.75.75 0 01-1.5 0v-.5c0-.72.57-1.172 1.081-1.287A1.5 1.5 0 108.94 6.94zM10 15a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/></svg>¿Se permite hacer eventos o celebraciones?</span>
+          <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
+        </button>
+        <div x-show="open===8" class="p-4 pt-0 space-y-2 text-justify">
+          <p>Sí, con previo aviso. Podemos ayudarte a coordinar si planeas celebrar algo especial.</p>
+        </div>
+      </div>
+      <div class="border rounded-lg shadow-lg" :class="{'bg-white':open===9}">
+        <button class="btn-flashy w-full flex justify-between items-center p-4" @click="open===9?open=null:open=9">
+          <span class="flex items-center"><svg class="w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zM8.94 6.94a.75.75 0 11-1.061-1.061 3 3 0 112.871 5.026v.345a.75.75 0 01-1.5 0v-.5c0-.72.57-1.172 1.081-1.287A1.5 1.5 0 108.94 6.94zM10 15a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/></svg>¿La villa es pet friendly?</span>
+          <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
+        </button>
+        <div x-show="open===9" class="p-4 pt-0 space-y-2 text-justify">
+          <p>Actualmente no se permite el ingreso de mascotas, para mantener las condiciones de limpieza y seguridad.</p>
+        </div>
+      </div>
+      <div class="border rounded-lg shadow-lg" :class="{'bg-white':open===10}">
+        <button class="btn-flashy w-full flex justify-between items-center p-4" @click="open===10?open=null:open=10">
+          <span class="flex items-center"><svg class="w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zM8.94 6.94a.75.75 0 11-1.061-1.061 3 3 0 112.871 5.026v.345a.75.75 0 01-1.5 0v-.5c0-.72.57-1.172 1.081-1.287A1.5 1.5 0 108.94 6.94zM10 15a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/></svg>¿Hay estacionamiento disponible?</span>
+          <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
+        </button>
+        <div x-show="open===10" class="p-4 pt-0 space-y-2 text-justify">
+          <p>Sí, contamos con estacionamiento privado y seguro para 6 vehículos dentro de la propiedad.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section data-aos="fade-up" id="testimonios" class="bg-white py-12" x-data="testimonialApp()" x-init="init()">
+  <div class="max-w-5xl mx-auto px-4">
+    <h2 class="text-center text-3xl logo-font mb-4">Comentarios</h2>
+    <div class="space-y-4 max-w-xl mx-auto">
+    <template x-for="(t, index) in testimonials" :key="index">
+      <div class="p-4 bg-gray-100 rounded">
+        <div class="flex text-yellow-500 mb-1">
+          <template x-for="i in Number(t.calificacion)">
+            <span>&#9733;</span>
+          </template>
+        </div>
+        <p class="italic" x-text="t.mensaje"></p>
+        <p class="text-right mt-2 font-semibold" x-text="t.nombre"></p>
+      </div>
+    </template>
+  </div>
+    <form class="mt-8 space-y-4 max-w-xl mx-auto" @submit.prevent="addTestimonial">
+    <input type="text" placeholder="Nombre" x-model="nuevo.nombre" required class="w-full border rounded p-2" />
+    <textarea placeholder="Mensaje" x-model="nuevo.mensaje" required class="w-full border rounded p-2"></textarea>
+    <select x-model="nuevo.calificacion" required class="w-full border rounded p-2">
+      <option value="" disabled>Calificación</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
+    <button type="submit" class="btn-flashy bg-amber-500 text-white px-4 py-2 rounded">Enviar</button>
+    </form>
+  </div>
+</section>
+<section data-aos="fade-up" id="reserva" class="py-12 bg-white text-center">
+  <div class="max-w-5xl mx-auto px-4">
+    <h2 class="text-3xl logo-font mb-4">Reserva en</h2>
+    <div class="flex flex-col items-center">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/69/Airbnb_Logo_B%C3%A9lo.svg" alt="Logo de Airbnb" class="w-28 mb-4">
+      <p class="mb-4">Reserva tu estancia con nosotros a trav&eacute;s de Airbnb y descubre un refugio inolvidable.</p>
+      <a href="https://www.airbnb.mx/rooms/1128890516116144398?guests=1&amp;adults=1&amp;s=67&amp;unique_share_id=c73410a5-2c0d-47d7-a347-c3289cf07789" target="_blank" rel="noopener noreferrer" class="btn-flashy bg-[#ff5a5f] hover:bg-[#ff385c] text-white px-6 py-3 rounded-full font-semibold">Reservar en Airbnb</a>
+    </div>
+  </div>
+</section>
+<section data-aos="fade-up" id="contacto" class="py-12 bg-gray-100">
+  <div class="max-w-5xl mx-auto px-4">
+    <h2 class="text-center text-3xl logo-font mb-4">Contáctanos</h2>
+    <form class="max-w-xl mx-auto space-y-4" action="https://formsubmit.co/villalaperla1@gmail.com" method="POST">
+    <input type="text" name="nombre" placeholder="Nombre" required class="w-full border rounded p-2" />
+    <input type="email" name="correo" placeholder="Correo" required class="w-full border rounded p-2" />
+    <textarea name="mensaje" placeholder="Mensaje" required class="w-full border rounded p-2"></textarea>
+    <button type="submit" class="btn-flashy bg-amber-500 hover:bg-amber-600 text-white px-4 py-2 rounded w-full">Enviar</button>
+  </form>
+  </div>
+</section>
+<section data-aos="fade-up" id="clima" class="py-12 bg-white">
+  <div class="max-w-5xl mx-auto px-4">
+    <h2 class="text-center text-3xl logo-font mb-4">Pronóstico del clima</h2>
+    <img src="weather.svg" alt="Pronóstico" class="mx-auto w-24 h-24 mb-4">
+    <div id="weather" class="text-center space-y-4">
+      <p>Cargando clima...</p>
+    </div>
+  </div>
+</section>
+<section data-aos="fade-up" id="como-llegar" class="py-12 bg-gray-100">
+  <div class="max-w-5xl mx-auto px-4 text-center space-y-4">
+    <h2 class="text-center text-3xl logo-font mb-4">¿Cómo llegar?</h2>
+    <p class="text-center mb-4">Utiliza Google Maps para obtener la ruta.</p>
+  <a href="https://maps.app.goo.gl/yNJiRgzKyytseDHg9" target="_blank" rel="noopener" class="btn-flashy inline-flex items-center justify-center bg-white border border-gray-300 px-4 py-2 rounded shadow space-x-2">
+    <img src="google-maps.svg" alt="Google Maps" class="w-6 h-6">
+    <span>Abrir en Google Maps</span>
+  </a>
+    <p class="text-center mb-4">Escribe la dirección de tu punto de partida<br>por ejemplo:<br> "Av. Constitución 123, Centro, Aguascalientes, Ags.".</p>
+    <div class="flex justify-center space-x-2">
+      <input id="origin-input" type="text" placeholder="Ingresa tu punto de partida" class="border rounded p-2 w-full max-w-xs" />
+      <button id="obtener-direcciones" class="btn-flashy bg-amber-500 text-white px-4 py-2 rounded">Obtener direcciones</button>
+    </div>
+    <div id="map-canvas" class="map-container mx-auto"></div>
+    <div id="directions-panel" class="text-left mt-4 space-y-2"></div>
+  </div>
+</section>
+<a href="#top" class="btn-flashy fixed bottom-30 right-4 bg-amber-500 text-white p-4 rounded-full shadow-lg flex items-center justify-center" aria-label="Regresar arriba">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+    <path fill-rule="evenodd" d="M12 5.828l4.95 4.95a.75.75 0 101.06-1.06L12 3.707 6.99 9.718a.75.75 0 101.06 1.06L12 5.828zM4.5 18a.75.75 0 00.75.75h13.5a.75.75 0 000-1.5H5.25A.75.75 0 004.5 18z" clip-rule="evenodd" />
+  </svg>
+</a>
+<a href="https://wa.me/5214491108028" class="btn-flashy fixed bottom-4 right-4 bg-green-500 text-white p-4 rounded-full shadow-lg flex items-center justify-center" target="_blank" aria-label="WhatsApp">
+  <img src="WhatsApp.svg" alt="WhatsApp" class="w-8 h-8">
+</a>
+<footer class="bg-gray-800 text-white text-center p-4 mt-12">
+  <p>Síguenos en <a href="https://www.facebook.com/VillaLaPerlaAgs" class="underline">Facebook</a></p>
+  <p class="mt-2">© 2025 Palapa La Perla - Aguascalientes</p>
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyAE7g6ycbkgDjA-smEShhmvBvhRgwdQr1U",
+      authDomain: "villa-la-perla-ags.firebaseapp.com",
+      projectId: "villa-la-perla-ags",
+      storageBucket: "villa-la-perla-ags.appspot.com",
+      messagingSenderId: "717257793730",
+      appId: "1:717257793730:web:46138149d8d67d5d2b1b5b",
+      measurementId: "G-0TVJXCPT1Z"
+    };
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+  document.addEventListener('DOMContentLoaded', function () {
+    new Swiper('.gallery-swiper', {
+      effect: 'coverflow',
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      loop: true,
+      coverflowEffect: {
+        rotate: 30,
+        stretch: 0,
+        depth: 200,
+        modifier: 1,
+        slideShadows: true
+      },
+      pagination: { el: '.swiper-pagination', clickable: true }
+    });
+    GLightbox({ selector: '.glightbox' });
+    const nav = document.getElementById('main-nav');
+    const openBtn = document.getElementById('open-menu');
+    const closeBtn = document.getElementById('close-menu');
+    const links = nav.querySelectorAll('a');
+    const hide = () => nav.classList.add('-translate-x-full');
+    openBtn.addEventListener('click', e => {
+      e.stopPropagation();
+      nav.classList.remove('-translate-x-full');
+    });
+    closeBtn.addEventListener('click', hide);
+    links.forEach(l => l.addEventListener('click', hide));
+    document.addEventListener('click', e => {
+      if(!nav.contains(e.target) && !openBtn.contains(e.target)) hide();
+    });
+  AOS.init();
+  });
+    function testimonialApp(){
+      return {
+        testimonials: [],
+        nuevo: {nombre: '', mensaje: '', calificacion: 5},
+        firestoreEnabled: true,
+        async init(){
+          try {
+            const snapshot = await db.collection('testimonials').get();
+            this.testimonials = snapshot.docs.map(doc => doc.data());
+          } catch(e) {
+            console.error('Failed to load testimonials', e);
+            this.testimonials = [];
+            this.firestoreEnabled = false;
+          }
+        },
+        async addTestimonial(){
+          if(this.nuevo.nombre && this.nuevo.mensaje && this.nuevo.calificacion){
+            if(this.firestoreEnabled){
+              try {
+                await db.collection('testimonials').add({...this.nuevo});
+              } catch(e) {
+                console.error('Failed to save testimonial', e);
+                this.firestoreEnabled = false;
+              }
+            }
+            this.testimonials.push({...this.nuevo});
+            this.nuevo = {nombre:'',mensaje:'',calificacion:5};
+          }
+        }
+      }
+    }
+</script>
+<script>
+const VILLA_LAT=21.891537;
+const VILLA_LNG=-102.339594;
+ let map,directionsService,directionsRenderer,autocomplete;
+function initMap(){
+ map=new google.maps.Map(document.getElementById("map-canvas"),{center:{lat:VILLA_LAT,lng:VILLA_LNG},zoom:13});
+ directionsService=new google.maps.DirectionsService();
+ directionsRenderer=new google.maps.DirectionsRenderer();
+ directionsRenderer.setMap(map);
+ directionsRenderer.setPanel(document.getElementById("directions-panel"));
+ autocomplete=new google.maps.places.PlaceAutocompleteElement({inputElement:document.getElementById("origin-input")});
+}
+function calcularRuta(){
+ const origin=document.getElementById("origin-input").value;
+ if(!origin)return;
+ directionsService.route({origin:origin,destination:{lat:VILLA_LAT,lng:VILLA_LNG},travelMode:google.maps.TravelMode.DRIVING},(res,status)=>{if(status==="OK"){directionsRenderer.setDirections(res);}else{alert("No se pudo obtener la ruta: "+status);}});
+}
+document.getElementById("obtener-direcciones").addEventListener("click",e=>{e.preventDefault();calcularRuta();});
+</script>
+<script>
+async function cargarClima(){
+  try{
+    const res=await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${VILLA_LAT}&longitude=${VILLA_LNG}&current_weather=true&daily=temperature_2m_max,temperature_2m_min,weathercode&timezone=auto`);
+    const data=await res.json();
+    const weather=document.getElementById('weather');
+    if(!data.current_weather){weather.textContent='No se pudo cargar el clima';return;}
+    const desc=codigoClima(data.current_weather.weathercode);
+    let html=`<p class="text-2xl font-semibold">${data.current_weather.temperature}°C - ${desc}</p>`;
+    html+='<div class="grid grid-cols-2 sm:grid-cols-3 gap-4 mt-4">';
+    for(let i=0;i<data.daily.time.length;i++){
+      const date=new Date(data.daily.time[i]);
+      html+=`<div><p class="font-semibold">${date.toLocaleDateString()}</p><p>Max: ${data.daily.temperature_2m_max[i]}°C</p><p>Min: ${data.daily.temperature_2m_min[i]}°C</p></div>`;
+    }
+    html+='</div>';
+    weather.innerHTML=html;
+  }catch(e){
+    document.getElementById('weather').textContent='Error al cargar clima';
+  }
+}
+function codigoClima(c){
+  const m={0:'Despejado',1:'Mayormente despejado',2:'Parcialmente nublado',3:'Nublado',45:'Neblina',48:'Niebla escarchada',51:'Llovizna ligera',53:'Llovizna moderada',55:'Llovizna intensa',61:'Lluvia ligera',63:'Lluvia moderada',65:'Lluvia intensa',80:'Chubascos',95:'Tormenta',96:'Tormenta con granizo'};
+  return m[c]||'';
+}
+document.addEventListener('DOMContentLoaded',cargarClima);
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDGPhkcGn5alswcJ9ClJ__pXe9WfFE0K3c&libraries=places&callback=initMap&loading=async"></script>
+</body>
+</html>
