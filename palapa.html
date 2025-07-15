@@ -43,8 +43,10 @@ body { font-family: 'Montserrat', sans-serif; }
 /* Contenedor para el mapa */
 .map-container {
   width: 100%;
-  max-width: 400px;
-  height: 400px;
+  max-width: 600px;
+  position: relative;
+  padding-bottom: 75%; /* 4:3 ratio */
+  height: 0;
   border-radius: 1rem;
   overflow: hidden;
   box-shadow: 0 20px 40px rgba(0,0,0,0.7);
@@ -111,7 +113,7 @@ body { font-family: 'Montserrat', sans-serif; }
   <div class="max-w-5xl mx-auto px-4 text-center">
     <h2 class="text-3xl logo-font mb-4">Sobre la Palapa</h2>
     <div class="space-y-2" style="text-align: justify;">
-      <p>Ven a disfrutar de nuestra increíble alberca en "Palapa La Perla" y goza de todas las amenidades, el espacio y la privacidad con tu familia y amigos.</p>
+      <p>En Palapa La Perla vivir&aacute;s momentos &uacute;nicos rodeado de naturaleza. Nuestro espacio est&aacute; pensado para convivir c&oacute;modamente con tu familia y amigos. Podr&aacute;s relajarte en la alberca, cocinar en el asador y disfrutar de &aacute;reas amplias para celebrar. Aqu&iacute; tendr&aacute;s la privacidad que buscas sin alejarte de la ciudad. Ven y descubre por qu&eacute; somos el lugar ideal para tus reuniones.</p>
   </div>
 </section>
 <section data-aos="fade-up" id="instalaciones" class="py-12 bg-gray-100">
@@ -125,7 +127,7 @@ body { font-family: 'Montserrat', sans-serif; }
             <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
           </button>
           <div x-show="open===1" class="p-4 pt-0 space-y-2 text-justify">
-            <p>Disfruta de nuestra alberca climatizada durante todo el a&ntilde;o, perfecta para relajarte o divertirte.</p>
+            <p>Nuestra alberca climatizada se mantiene a la temperatura ideal sin importar la temporada. Podr&aacute;s nadar por la ma&ntilde;ana o al atardecer con total comodidad. Es perfecta para relajarte o convivir con los tuyos.</p>
           </div>
         </div>
         <div class="border rounded-lg shadow-lg" :class="{'bg-white':open===2}">
@@ -134,7 +136,7 @@ body { font-family: 'Montserrat', sans-serif; }
             <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
           </button>
           <div x-show="open===2" class="p-4 pt-0 space-y-2 text-justify">
-            <p>Prepara deliciosas carnes asadas y comparte con tus invitados en la amplia terraza.</p>
+            <p>La terraza cuenta con un asador listo para tus parrilladas favoritas. Encontrar&aacute;s espacio suficiente para convivir c&oacute;modamente mientras cocinas. Es el punto ideal para disfrutar una comida al aire libre.</p>
           </div>
         </div>
         <div class="border rounded-lg shadow-lg" :class="{'bg-white':open===3}">
@@ -143,7 +145,7 @@ body { font-family: 'Montserrat', sans-serif; }
             <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
           </button>
           <div x-show="open===3" class="p-4 pt-0 space-y-2 text-justify">
-            <p>Rel&aacute;jate al sol en nuestros c&oacute;modos camastros junto a la alberca.</p>
+            <p>Los camastros junto a la alberca invitan a descansar bajo el sol. Podr&aacute;s broncearte mientras disfrutas de la vista y la tranquilidad del lugar. Aprovecha estos espacios para leer o simplemente relajarte.</p>
           </div>
         </div>
         <div class="border rounded-lg shadow-lg" :class="{'bg-white':open===4}">
@@ -152,7 +154,7 @@ body { font-family: 'Montserrat', sans-serif; }
             <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
           </button>
           <div x-show="open===4" class="p-4 pt-0 space-y-2 text-justify">
-            <p>Cuentas con refrigerador y microondas para mantener tus alimentos y bebidas fr&iacute;os o calientes.</p>
+            <p>Dentro de la palapa encontrar&aacute;s refrigerador y microondas de uso libre. Conserva tus alimentos y bebidas en perfectas condiciones durante tu visita. As&iacute; podr&aacute;s traer todo lo necesario sin preocupaciones.</p>
           </div>
         </div>
         <div class="border rounded-lg shadow-lg" :class="{'bg-white':open===5}">
@@ -161,7 +163,7 @@ body { font-family: 'Montserrat', sans-serif; }
             <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
           </button>
           <div x-show="open===5" class="p-4 pt-0 space-y-2 text-justify">
-            <p>Disfruta de entretenimiento y con&eacute;ctate cuando lo necesites con nuestro servicio de internet.</p>
+            <p>Para que no pierdas conexi&oacute;n, ofrecemos Wi-Fi de buena velocidad en toda el &aacute;rea. Tambi&eacute;n contamos con televisi&oacute;n para tus momentos de descanso en interior. Combina diversi&oacute;n con comodidad tecnol&oacute;gica.</p>
           </div>
         </div>
         <div class="border rounded-lg shadow-lg" :class="{'bg-white':open===6}">
@@ -170,7 +172,7 @@ body { font-family: 'Montserrat', sans-serif; }
             <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
           </button>
           <div x-show="open===6" class="p-4 pt-0 space-y-2 text-justify">
-            <p>Cuentas con estacionamiento privado para la seguridad y comodidad de todos tus invitados.</p>
+            <p>Tus veh&iacute;culos estar&aacute;n seguros en nuestro estacionamiento privado dentro de la propiedad. El acceso es exclusivo para tus invitados y permanece disponible durante toda la estancia. Olv&iacute;date de dejar el auto en la calle.</p>
           </div>
         </div>
         <div class="border rounded-lg shadow-lg" :class="{'bg-white':open===7}">
@@ -179,7 +181,7 @@ body { font-family: 'Montserrat', sans-serif; }
             <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
           </button>
           <div x-show="open===7" class="p-4 pt-0 space-y-2 text-justify">
-            <p>Encuentra rincones tranquilos para descansar, meditar o simplemente disfrutar con tus seres queridos.</p>
+            <p>La palapa cuenta con &aacute;reas verdes y rincones tranquilos para que te olvides del estr&eacute;s. Si prefieres meditar o leer, hallar&aacute;s lugares acogedores alrededor. Todo est&aacute; pensado para que disfrutes un d&iacute;a sin preocupaciones.</p>
           </div>
         </div>
       </div>
@@ -383,18 +385,9 @@ body { font-family: 'Montserrat', sans-serif; }
 <section data-aos="fade-up" id="como-llegar" class="py-12 bg-gray-100">
   <div class="max-w-5xl mx-auto px-4 text-center space-y-4">
     <h2 class="text-center text-3xl logo-font mb-4">¿Cómo llegar?</h2>
-    <p class="text-center mb-4">Utiliza Google Maps para obtener la ruta.</p>
-  <a href="https://maps.app.goo.gl/yNJiRgzKyytseDHg9" target="_blank" rel="noopener" class="btn-flashy inline-flex items-center justify-center bg-white border border-gray-300 px-4 py-2 rounded shadow space-x-2">
-    <img src="google-maps.svg" alt="Google Maps" class="w-6 h-6">
-    <span>Abrir en Google Maps</span>
-  </a>
-    <p class="text-center mb-4">Escribe la dirección de tu punto de partida<br>por ejemplo:<br> "Av. Constitución 123, Centro, Aguascalientes, Ags.".</p>
-    <div class="flex justify-center space-x-2">
-      <input id="origin-input" type="text" placeholder="Ingresa tu punto de partida" class="border rounded p-2 w-full max-w-xs" />
-      <button id="obtener-direcciones" class="btn-flashy bg-amber-500 text-white px-4 py-2 rounded">Obtener direcciones</button>
+    <div class="map-container mx-auto">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1097.9154109690676!2d-102.33917816330266!3d21.884508472698272!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8429ec143ae4d9fb%3A0x4016978679c5220!2sAguascalientes%2C%20Ags.!5e1!3m2!1ses-419!2smx!4v1752607012033!5m2!1ses-419!2smx" width="600" height="450" style="border:0; position:absolute; top:0; left:0; width:100%; height:100%;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
-    <div id="map-canvas" class="map-container mx-auto"></div>
-    <div id="directions-panel" class="text-left mt-4 space-y-2"></div>
   </div>
 </section>
 <a href="#top" class="btn-flashy fixed bottom-30 right-4 bg-amber-500 text-white p-4 rounded-full shadow-lg flex items-center justify-center" aria-label="Regresar arriba">
@@ -489,23 +482,8 @@ body { font-family: 'Montserrat', sans-serif; }
     }
 </script>
 <script>
-const VILLA_LAT=21.891537;
-const VILLA_LNG=-102.339594;
- let map,directionsService,directionsRenderer,autocomplete;
-function initMap(){
- map=new google.maps.Map(document.getElementById("map-canvas"),{center:{lat:VILLA_LAT,lng:VILLA_LNG},zoom:13});
- directionsService=new google.maps.DirectionsService();
- directionsRenderer=new google.maps.DirectionsRenderer();
- directionsRenderer.setMap(map);
- directionsRenderer.setPanel(document.getElementById("directions-panel"));
- autocomplete=new google.maps.places.PlaceAutocompleteElement({inputElement:document.getElementById("origin-input")});
-}
-function calcularRuta(){
- const origin=document.getElementById("origin-input").value;
- if(!origin)return;
- directionsService.route({origin:origin,destination:{lat:VILLA_LAT,lng:VILLA_LNG},travelMode:google.maps.TravelMode.DRIVING},(res,status)=>{if(status==="OK"){directionsRenderer.setDirections(res);}else{alert("No se pudo obtener la ruta: "+status);}});
-}
-document.getElementById("obtener-direcciones").addEventListener("click",e=>{e.preventDefault();calcularRuta();});
+const VILLA_LAT=21.884508;
+const VILLA_LNG=-102.339178;
 </script>
 <script>
 async function cargarClima(){
@@ -533,6 +511,5 @@ function codigoClima(c){
 }
 document.addEventListener('DOMContentLoaded',cargarClima);
 </script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDGPhkcGn5alswcJ9ClJ__pXe9WfFE0K3c&libraries=places&callback=initMap&loading=async"></script>
 </body>
 </html>
