@@ -113,14 +113,13 @@ body { font-family: 'Montserrat', sans-serif; }
   <div class="max-w-5xl mx-auto px-4 text-center">
     <h2 class="text-3xl logo-font mb-4">Sobre la Palapa</h2>
     <div class="space-y-2" style="text-align: justify;">
-      <p>En Palapa La Perla vivir&aacute;s momentos &uacute;nicos rodeado de naturaleza. Nuestro espacio est&aacute; pensado para convivir c&oacute;modamente con tu familia y amigos. Podr&aacute;s relajarte en la alberca, cocinar en el asador y disfrutar de &aacute;reas amplias para celebrar. Aqu&iacute; tendr&aacute;s la privacidad que buscas sin alejarte de la ciudad. Ven y descubre por qu&eacute; somos el lugar ideal para tus reuniones.</p>
+      <p>En Palapa La Perla vivir&aacute;s momentos &uacute;nicos. Nuestro espacio est&aacute; pensado para convivir c&oacute;modamente con tu familia y amigos. Podr&aacute;s relajarte en la alberca, cocinar en el asador y disfrutar de &aacute;reas amplias para celebrar. Aqu&iacute; tendr&aacute;s la privacidad que buscas sin alejarte de la ciudad. Ven y descubre por qu&eacute; somos el lugar ideal para tus reuniones.</p>
   </div>
 </section>
 <section data-aos="fade-up" id="instalaciones" class="py-12 bg-gray-100">
   <div class="max-w-5xl mx-auto px-4">
     <h2 class="text-center text-3xl logo-font mb-4">Nuestras instalaciones</h2>
-  </div>
-      <div class="space-y-4" x-data="{open:null}">
+    <div class="space-y-4" x-data="{open:null}">
         <div class="border rounded-lg shadow-lg" :class="{'bg-white':open===1}">
           <button class="btn-flashy w-full flex justify-between items-center p-4" @click="open===1?open=null:open=1">
             <span class="flex items-center"><svg class="w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2a9.99 9.99 0 00-3 19.49v-4.77c-.61-.3-1-.9-1-1.59V13a1 1 0 01.54-.89l2.94-1.47a1 1 0 01.92 0l2.94 1.47A1 1 0 0116 13v2.13c0 .69-.39 1.29-1 1.59v4.77A10 10 0 0012 2z"/></svg>Alberca climatizada</span>
@@ -181,10 +180,11 @@ body { font-family: 'Montserrat', sans-serif; }
             <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
           </button>
           <div x-show="open===7" class="p-4 pt-0 space-y-2 text-justify">
-            <p>La palapa cuenta con &aacute;reas verdes y rincones tranquilos para que te olvides del estr&eacute;s. Si prefieres meditar o leer, hallar&aacute;s lugares acogedores alrededor. Todo est&aacute; pensado para que disfrutes un d&iacute;a sin preocupaciones.</p>
+            <p>La palapa ofrece espacios tranquilos para que te olvides del estr&eacute;s. Si prefieres meditar o leer, hallar&aacute;s rincones acogedores dentro de la propiedad. Todo est&aacute; pensado para que disfrutes un d&iacute;a sin preocupaciones.</p>
           </div>
         </div>
       </div>
+  </div>
 </section>
 <section data-aos="fade-up" id="galeria" class="bg-white py-12">
   <div class="max-w-5xl mx-auto px-4">
@@ -298,7 +298,7 @@ body { font-family: 'Montserrat', sans-serif; }
           <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
         </button>
         <div x-show="open===7" class="p-4 pt-0 space-y-2 text-justify">
-          <p>Sí, es una zona tranquila dentro de una reserva ecológica, con acceso controlado y privacidad total.</p>
+          <p>Sí, es una zona tranquila y segura, con acceso controlado y privacidad total.</p>
         </div>
       </div>
       <div class="border rounded-lg shadow-lg" :class="{'bg-white':open===8}">
@@ -386,7 +386,7 @@ body { font-family: 'Montserrat', sans-serif; }
   <div class="max-w-5xl mx-auto px-4 text-center space-y-4">
     <h2 class="text-center text-3xl logo-font mb-4">¿Cómo llegar?</h2>
     <div class="map-container mx-auto">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1097.9154109690676!2d-102.33917816330266!3d21.884508472698272!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8429ec143ae4d9fb%3A0x4016978679c5220!2sAguascalientes%2C%20Ags.!5e1!3m2!1ses-419!2smx!4v1752607012033!5m2!1ses-419!2smx" width="600" height="450" style="border:0; position:absolute; top:0; left:0; width:100%; height:100%;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <iframe src="https://maps.google.com/maps?q=21.884912354551602,-102.33927351382593&amp;z=17&amp;output=embed" width="600" height="450" style="border:0; position:absolute; top:0; left:0; width:100%; height:100%;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
   </div>
 </section>
